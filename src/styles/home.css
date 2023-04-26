@@ -1,0 +1,49 @@
+.home-wrapper {
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-image: url("https://autostar.pro-theme.info/wp-content/uploads/2018/12/slide01.jpg");
+    position: relative;
+    padding-top: 6%;
+}
+
+.home-wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom right, transparent 50%, var(--primary-background) 50%);
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.main-advertise {
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.main-advertise .title {
+    font-size: 4vw;
+    font-weight: bolder;
+}
+
+.main-advertise .hook {
+    font-size: 2vw;
+}
+
+.main-advertise .hook .ad-price {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.main-advertise .slogan{
+    font-size: 2vw;
+}

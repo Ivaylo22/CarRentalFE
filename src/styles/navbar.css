@@ -1,0 +1,25 @@
+.navigation-wrapper {
+    height: 10vh;
+    background-color: var(--secondary-background);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons-wrapper {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation-wrapper img {
+    width: 12.5vh;
+    height: 12.5vh;
+}
+
+.buttons-wrapper button{
+    color: var(--secondary-font);
+    font-weight: bold;
+    font-size: large;
+}
