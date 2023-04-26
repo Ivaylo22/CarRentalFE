@@ -22,10 +22,10 @@ export default function Home({cars, setCars}){
                 <div className="main-advertise">  
                     <h1 className="title">Book Your Car Rental</h1>
                     <p className="hook">Luxury and Comfortable Cars at low-cost, <span className="ad-price">starts $20 / day</span></p>
-                    <p className="slogan">Explore Your Adventure</p>
+                    <p className="slogan">Unlock Your Adventure</p>
                 </div>
                 <div className="date-picker">
-                    <h1>Explore Your AdventureExplore Your Adventure</h1>
+                    <h1>Unlock Your Adventure</h1>
                 </div>
             </main>
             <div>
