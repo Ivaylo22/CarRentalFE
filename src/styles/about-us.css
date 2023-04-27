@@ -83,7 +83,7 @@
     margin: 0 auto;
     display: flex;
     color: white;
-    padding-top: 5vh;
+    padding-top: 10vh;
     justify-content: space-around;
     align-content: center;
     flex: 1 1 0;
@@ -94,7 +94,6 @@
 }
 
 .step-icon img{
-    padding-top: 5vh;
     margin-right: 2vh;
     width: 120px;
     height: 100px;
