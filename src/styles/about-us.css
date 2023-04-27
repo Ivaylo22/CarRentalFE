@@ -1,0 +1,109 @@
+.about-us {
+    padding-top: 7vh;
+    background-color: white;
+    color: var(--primary-font);
+    height: 90vh;
+    margin: 0 auto;
+}
+
+.about-us h1 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 1vw;
+    text-align: center;
+    font-style: italic;
+}
+
+.icons-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 6vh;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.icon-section {
+    flex: 1 1 0;
+}
+
+.icon-section img{
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-section h3{
+    text-align: center;
+}
+
+.icon-section p {
+    padding-top: 3vh;
+    text-align: center;
+}
+
+.steps-wrapper {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    margin-top: 5vh;
+    background-image: url('../images/about-us-gif.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,1);
+}
+
+.steps-wrapper::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* adjust the alpha value to make the image darker or lighter */
+    mix-blend-mode: multiply;
+}
+
+.steps-wrapper h1 {
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    font-size: 2vw;
+    padding-top: 5vh;
+    width: 40%;
+}
+
+.steps-icons-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+    padding-top: 5vh;
+    justify-content: space-around;
+    align-content: center;
+    flex: 1 1 0;
+}
+
+.step-icon {
+    display: flex;
+}
+
+.step-icon img{
+    padding-top: 5vh;
+    margin-right: 2vh;
+    width: 120px;
+    height: 100px;
+    display: block;
+}
+
+.step-icon h2 {
+    font-size: 2vw;
+    width: 50%;
+    text-align: left;
+    align-self: center;
+}

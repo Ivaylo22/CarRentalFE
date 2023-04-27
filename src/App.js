@@ -12,6 +12,7 @@ import "./styles/global.css"
 import "./styles/variables.css"
 import "./styles/navbar.css"
 import "./styles/home.css"
+import "./styles/about-us.css"
 
 export default function App() {
     const [cars, setCars] = React.useState([]);

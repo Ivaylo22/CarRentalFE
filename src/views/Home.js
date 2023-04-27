@@ -1,6 +1,31 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import AboutUs from "./AboutUs";
 
 export default function Home({cars, setCars}){
+    //Scroll to #about-us
+    const location = useLocation();
+    useEffect(() => {
+        if (location.hash) {
+        setTimeout(() => {
+            const element = document.querySelector(location.hash);
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
+        }, 0);
+        }
+    }, [location]);
+
+    //Refresh url when scroll to top
+    function handleScroll() {
+        if (window.pageYOffset === 0) {
+          const url = new URL(window.location.href);
+          url.hash = '';
+          window.history.pushState(null, '', url.toString());
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    //Fetch cars
     useEffect(() => {
         const fetchCars = async () => {
             const response = await fetch("http://localhost:8081/cars");
@@ -14,7 +39,6 @@ export default function Home({cars, setCars}){
         }
 
     }, [setCars, cars.length])
-    console.log(cars);
 
     return(
         <div>
@@ -28,10 +52,10 @@ export default function Home({cars, setCars}){
                     <h1>Unlock Your Adventure</h1>
                 </div>
             </main>
-            <div>
-                <h1 className="test">asdasd</h1>
-            </div>
+            <AboutUs />
         </div>
 
     )
+
+    
 }
