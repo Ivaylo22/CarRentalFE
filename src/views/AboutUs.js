@@ -25,7 +25,7 @@ export default function AboutUs() {
                 <div className="steps-icons-wrapper">
                     <div className="step-icon">
                         <img src="https://autostar.pro-theme.info/wp-content/uploads/2018/12/steps01.png" alt="Magnifier"></img>
-                        <h2>Select your desired car</h2>
+                        <h2>Select your desired dates</h2>
                     </div>
                     <div className="step-icon">
                         <img src="//autostar.pro-theme.info/wp-content/uploads/2018/12/steps02.png" alt="Location"></img>

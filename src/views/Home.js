@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AboutUs from "./AboutUs";
+import HomeDatePicker from "../components/HomeDatePicker";
 
 export default function Home({cars, setCars}){
     //Scroll to #about-us
@@ -49,7 +50,7 @@ export default function Home({cars, setCars}){
                     <p className="slogan">Unlock Your Adventure</p>
                 </div>
                 <div className="date-picker">
-                    <h1>Unlock Your Adventure</h1>
+                    <HomeDatePicker />
                 </div>
             </main>
             <AboutUs />
