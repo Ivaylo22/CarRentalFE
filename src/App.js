@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -15,7 +15,9 @@ import "./styles/home.css"
 import "./styles/about-us.css"
 
 export default function App() {
-    const [cars, setCars] = React.useState([]);
+    const [cars, setCars] = useState([]);
+    const [startDate, setStartDate]  = useState(new Date());
+    const [dropDate, setDropDate] = useState(new Date());
 
         const router = createBrowserRouter(
             createRoutesFromElements(
@@ -24,7 +26,13 @@ export default function App() {
                     element={<Navbar/>}>
                         <Route
                             index
-                            element={<Home cars={cars} setCars={setCars}/>} >
+                            element=
+                                {<Home 
+                                    cars={cars} 
+                                    setCars={setCars}
+                                    setStartDate={setStartDate}
+                                    setDropDate={setDropDate}
+                                />} >
                         </Route>
                         <Route
                             path="catalogue"
@@ -41,6 +49,8 @@ export default function App() {
               </Route>
             )
           )
+
+    console.log(startDate)  
 
     return (
         <div className="global-wrapper">
