@@ -6,3 +6,17 @@ export const bulgarianCities =
     "Vidin", "Kazanluk", "Kyustendil","Kardzhali", "Montana", "Dimitrovgrad", 
     "Targovishte", "Lovech", "Silistra", "Dupnica", "Svishtov"
 ]
+
+export function isAvailableinRange(startDate, endDate, takenDates) {
+    const start = new Date(startDate).getTime();
+    const end = new Date(endDate).getTime();
+  
+    for (let i = 0; i < takenDates.length; i++) {
+        const takenDate = new Date(takenDates[i]).getTime();
+        if (takenDate >= start && takenDate <= end) {
+            return false;
+        }
+    }
+  
+    return true;
+}

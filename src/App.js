@@ -13,11 +13,13 @@ import "./styles/variables.css"
 import "./styles/navbar.css"
 import "./styles/home.css"
 import "./styles/about-us.css"
+import "./styles/filter.css"
+
 
 export default function App() {
     const [cars, setCars] = useState([]);
-    const [startDate, setStartDate]  = useState(new Date());
-    const [dropDate, setDropDate] = useState(new Date());
+    const [startDate, setStartDate]  = useState(null);
+    const [dropDate, setDropDate] = useState(null);
 
         const router = createBrowserRouter(
             createRoutesFromElements(
@@ -36,7 +38,14 @@ export default function App() {
                         </Route>
                         <Route
                             path="catalogue"
-                            element={<Catalogue/>} >
+                            element={<Catalogue
+                                        startDate={startDate}
+                                        dropDate={dropDate}
+                                        setStartDate={setStartDate}
+                                        setDropDate={setDropDate}
+                                        cars={cars}
+                                        setCars={setCars}
+                                    />} >
                         </Route>
                         <Route
                             path="about-us"
@@ -49,8 +58,6 @@ export default function App() {
               </Route>
             )
           )
-
-    console.log(startDate)  
 
     return (
         <div className="global-wrapper">
