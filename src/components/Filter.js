@@ -8,7 +8,7 @@ import dayjs from "dayjs"
 export default function Filter({startDate, dropDate, setStartDate, setDropDate, cars}){
     
     const distinctEngineTypes = [...new Set(cars.map(car => car.engine.type.charAt(0).toUpperCase() + car.engine.type.slice(1)))];
-
+console.log(cars)
     return (
         <div className="filter-wrapper">
             <div className="filter-params-wrapper">

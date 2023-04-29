@@ -1,0 +1,57 @@
+.car-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.car-card-wrapper * {
+    padding: 0;
+}
+
+.car-card-wrapper img {
+    width: 100%;
+    height: 20vh;
+}
+
+.card-info {
+    background-color: var(--secondary-background);
+}
+
+.icons-wrapper {
+    padding-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-wrapper {
+    display: flex;
+}
+
+.icon {
+    width: 20%;
+}
+
+.icon-text {
+    width: 100%;
+    padding-left: 5%;
+}
+
+.button-wrapper {
+    width: 100%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0 auto;
+}
+
+.button-wrapper .MuiButton-outlined {
+    border-color: var(--secondary-font);
+}
+
+.button-wrapper .MuiButton-outlined:hover {
+    border-color: var(--secondary-font);
+}
+
+.button-wrapper a {
+    color: var(--secondary-font);
+}

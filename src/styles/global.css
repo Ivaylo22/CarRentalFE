@@ -9,6 +9,11 @@
 .body-wrapper {
     height: 100vh;
 }
+.all-cars-wrapper {
+    padding-top: 8vh;
+    width: 65%;
+    margin: 0 auto;
+}
 
 a {
     text-decoration: none;

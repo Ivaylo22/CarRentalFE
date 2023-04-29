@@ -14,6 +14,8 @@ import "./styles/navbar.css"
 import "./styles/home.css"
 import "./styles/about-us.css"
 import "./styles/filter.css"
+import "./styles/car-card.css"
+
 
 
 export default function App() {
@@ -47,6 +49,15 @@ export default function App() {
                                         setCars={setCars}
                                     />} >
                         </Route>
+                        <Route
+                            path="catalogue/:vin"
+                            // element=
+                            // {
+                            //     <InfoCard
+                            //     cocktails={cocktails}
+                            //     setCocktails={setCocktails} />}
+                            // loader={cocktailDetailsLoader}
+                            />
                         <Route
                             path="about-us"
                             element={<AboutUs/>} >
