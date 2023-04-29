@@ -3,28 +3,10 @@ import Filter from "../components/Filter";
 import CarCard from "../components/CarCard";
 
 export default function Catalogue({startDate, dropDate, setStartDate, setDropDate, cars, setCars}){
-    const [detailedCars, setDetailedCars] = useState([])
-
-    //MOVE TO HOME
-    useEffect(() => {
-        const fetchCarDetails = async () => {
-            const promises = cars.map(async (car) => {
-                const response = await fetch(`https://auto.dev/api/vin/${car.vinNumber}`);
-                const data = await response.json();
-
-                return { ...car, ...data };
-            });
-          const carsDetails = await Promise.all(promises);
-          setCars(carsDetails);
-          setDetailedCars(carsDetails)
-        };
-        fetchCarDetails();
-    }, [setCars]);
-    
     return(
         <div>
             <Filter 
-                cars={detailedCars}
+                cars={cars}
                 startDate={startDate}
                 dropDate={dropDate}
                 setStartDate={setStartDate} 

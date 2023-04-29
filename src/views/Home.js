@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import AboutUs from "./AboutUs";
 import HomeDatePicker from "../components/HomeDatePicker";
 
 export default function Home({cars, setCars, setStartDate, setDropDate}){
+    const [detailedCars, setDetailedCars] = useState([])
+
     //Scroll to #about-us
     const location = useLocation();
     useEffect(() => {
@@ -41,6 +43,21 @@ export default function Home({cars, setCars, setStartDate, setDropDate}){
 
     }, [setCars, cars.length])
 
+    useEffect(() => {
+        const fetchCarDetails = async () => {
+            const promises = cars.map(async (car) => {
+                const response = await fetch(`https://auto.dev/api/vin/${car.vinNumber}`);
+                const data = await response.json();
+
+                return { ...car, ...data };
+            });
+          const carsDetails = await Promise.all(promises);
+          setCars(carsDetails);
+          setDetailedCars(carsDetails)
+        };
+        fetchCarDetails();
+    }, [setCars]);
+    console.log(cars)
     return(
         <div>
             <main className="home-wrapper">
