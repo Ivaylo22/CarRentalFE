@@ -1,20 +1,31 @@
 import Filter from "../components/Filter";
 import CarCard from "../components/CarCard";
+import { useEffect, useState } from "react";
 
 export default function Catalogue({startDate, dropDate, setStartDate, setDropDate, detailedCars, maxPrice, setMaxPrice}){
+    const [filteredCars, setFilteredCars] = useState([]);
+    const [fuelType, setFuelType] = useState(null);
+
+    useEffect(() => {
+        setFilteredCars(detailedCars)
+    }, [detailedCars])
+
     return(
         <div>
             <Filter 
-                cars={detailedCars}
+                detailedCars={detailedCars}
                 startDate={startDate}
                 dropDate={dropDate}
                 setStartDate={setStartDate} 
                 setDropDate={setDropDate}
                 maxPrice={maxPrice}
                 setMaxPrice={setMaxPrice}
+                fuelType={fuelType}
+                setFuelType={setFuelType}
+                setFilteredCars={setFilteredCars}
             />
             <div className="all-cars-wrapper">
-            {detailedCars.map(car => (
+            {filteredCars.map(car => (
                 <CarCard 
                     key={car.vinNumber}
                     make={car.make.name}

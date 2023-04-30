@@ -6,6 +6,10 @@
     color: var(--secondary-font);
 }
 
+.car-card-wrapper.hidden {
+    opacity: 0;
+}
+
 .car-card-wrapper:hover{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
@@ -54,6 +58,7 @@
 .button-wrapper {
     width: 100%;
     padding-bottom: 2vh;
+    padding-top: 1vh;
     margin: 0 auto;
 }
 

@@ -29,8 +29,8 @@ export default function HomeDatePicker({setStartDate, setDropDate, setMaxPrice})
                 id="combo-box-demo"
                 options={prices}
                 renderInput={(params) => <TextField {...params}/>}       
-                onChange={(event, newValue) => {
-                    setMaxPrice(newValue);
+                onChange={(event, newMaxPrice) => {
+                    setMaxPrice(newMaxPrice);
                 }}   
             />  
             </DemoItem>

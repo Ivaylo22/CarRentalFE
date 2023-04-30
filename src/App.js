@@ -15,6 +15,7 @@ import "./styles/home.css"
 import "./styles/about-us.css"
 import "./styles/catalogue.css"
 import "./styles/car-card.css"
+import DetailedCarCard from "./components/DetailedCarCard";
 
 
 export default function App() {
@@ -80,12 +81,13 @@ export default function App() {
                     </Route>
                     <Route
                         path="catalogue/:vin"
-                        // element=
-                        // {
-                        //     <InfoCard
-                        //     cocktails={cocktails}
-                        //     setCocktails={setCocktails} />}
-                        // loader={cocktailDetailsLoader}
+                        element=
+                        {
+                            <DetailedCarCard
+                                detailedCars={detailedCars}
+                                startDate={startDate}
+                                dropDate={dropDate}
+                            />}
                         />
                     <Route
                         path="about-us"
