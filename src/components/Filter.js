@@ -5,10 +5,9 @@ import { DemoItem } from "@mui/x-date-pickers/internals/demo";
 import Button from '@mui/material/Button';
 import dayjs from "dayjs"
 
-export default function Filter({startDate, dropDate, setStartDate, setDropDate, cars}){
-    
+export default function Filter({startDate, dropDate, setStartDate, setDropDate, cars, maxPrice, setMaxPrice}){ 
     const distinctEngineTypes = [...new Set(cars.map(car => car.engine.type.charAt(0).toUpperCase() + car.engine.type.slice(1)))];
-console.log(cars)
+
     return (
         <div className="filter-wrapper">
             <div className="filter-params-wrapper">
@@ -38,12 +37,21 @@ console.log(cars)
                     />  
                 </DemoItem>
                 <DemoItem label="MAX PRICE">
-                    <TextField className="filter-price" id="outlined-basic" label="Maximum daily price" variant="outlined" />
+                    <TextField 
+                        className="filter-price" 
+                        id="outlined-basic" 
+                        label="Maximum daily price" 
+                        variant="outlined" 
+                        defaultValue={maxPrice}
+                        onChange={(event) => {
+                            setMaxPrice(event.target.value);
+                          }}
+                        />
                 </DemoItem>
                 
             </div>
             <div className="button-wrapper">
-                    <Button  className='button-filter' variant="contained">Filter</Button>
+                <Button  className='button-filter' variant="contained">Filter</Button>
             </div>
         </div>
     )

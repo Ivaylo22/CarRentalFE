@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
     width: 25%;
+    margin-bottom: 3vh;
+    color: var(--secondary-font);
+}
+
+.car-card-wrapper:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .car-card-wrapper * {
@@ -17,6 +23,13 @@
     background-color: var(--secondary-background);
 }
 
+.model-info {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1vw;
+    padding-top: 1vh;
+}
+
 .icons-wrapper {
     padding-top: 1vh;
     display: flex;
@@ -30,6 +43,7 @@
 
 .icon {
     width: 20%;
+    align-self: center;
 }
 
 .icon-text {
@@ -39,8 +53,7 @@
 
 .button-wrapper {
     width: 100%;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-bottom: 2vh;
     margin: 0 auto;
 }
 

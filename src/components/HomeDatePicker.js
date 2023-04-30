@@ -1,15 +1,13 @@
-import dayjs from 'dayjs';
-
 import { DemoItem } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { Autocomplete, Button, TextField } from '@mui/material';
-import { bulgarianCities } from '../Helpers';
+import { prices } from '../Helpers';
 import { NavLink } from 'react-router-dom';
 import { DatePicker } from '@mui/x-date-pickers';
 
 
-export default function HomeDatePicker({setStartDate, setDropDate}) {
+export default function HomeDatePicker({setStartDate, setDropDate, setMaxPrice}) {
 
     return (
         <div className="dates-form">
@@ -25,12 +23,15 @@ export default function HomeDatePicker({setStartDate, setDropDate}) {
                     />
                 </DemoItem>
             </LocalizationProvider>
-            <DemoItem label="City">
+            <DemoItem label="Max price">
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"
-                options={bulgarianCities}
-                renderInput={(params) => <TextField {...params} label="Select City" />}              
+                options={prices}
+                renderInput={(params) => <TextField {...params}/>}       
+                onChange={(event, newValue) => {
+                    setMaxPrice(newValue);
+                }}   
             />  
             </DemoItem>
             <NavLink to="catalogue"><Button className='button-find' variant="contained">Find it now</Button></NavLink>

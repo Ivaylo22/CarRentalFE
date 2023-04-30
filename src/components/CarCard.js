@@ -7,11 +7,12 @@ import { NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 export default function CarCard(props) {
-    const {vin, img, fuel, date, gearbox, engine, price} = props;
+    const {vin, make, model, img, fuel, date, gearbox, engine, price} = props;
     return (
         <div className="car-card-wrapper">
-            <img src="https://dub01pap001files.storage.live.com/y4mnMC_l2VxAtz_WL1aNC0EKYqRTbrDXag_pUdP0USFLaq-wwLpIPTzW-IvxU9Rj69ixviYymLi1HJKZtd85WAccf-Wjwo1q_TvaUieq7HwXylM5a1UqHYA0p5RfckIgKqdEuV61Juvp5QkEoaD8GprR_xwSZLfBQThDGwn0xT4YTetuuJivRqwgV73HuC9xwjP?width=465&height=600&cropmode=none" alt="Car"/>
-            <div className='card-info'>     
+            <img src={img} alt="Car"/>
+            <div className='card-info'>  
+                <p className='model-info'>{make.toUpperCase()} {model.toUpperCase()}</p>   
                 <div className="icons-wrapper">
 
                     <div className='icon-wrapper'>
@@ -19,7 +20,7 @@ export default function CarCard(props) {
                             <EvStationIcon/>
                         </div>
                         <div className='icon-text'> 
-                            <p>fuel type</p>
+                            <p>{fuel}</p>
                         </div>
                         
                     </div>
@@ -29,7 +30,7 @@ export default function CarCard(props) {
                             <CalendarMonthIcon/>
                         </div>
                         <div className='icon-text'>
-                            <p>manufacture date</p>
+                            <p>{date}</p>
                         </div>
                     </div>
 
@@ -38,7 +39,7 @@ export default function CarCard(props) {
                             <SettingsSuggestIcon/>
                         </div>
                         <div className='icon-text'>
-                            <p>type of gearbox </p>
+                            <p>{gearbox}</p>
                         </div>                    
                     </div>
 
@@ -47,7 +48,7 @@ export default function CarCard(props) {
                             <SettingsApplicationsIcon/>
                         </div>
                         <div className='icon-text'>
-                            <p>engine power</p>
+                            <p>{engine} HP</p>
                         </div>    
                     </div>
 
@@ -56,13 +57,13 @@ export default function CarCard(props) {
                             <AttachMoneyIcon/>
                         </div>
                         <div className='icon-text'>
-                            <p>price per day</p>
+                            <p>DAILY RATE {price} BGN</p>
                         </div>
                     </div>
 
                 </div>  
                 <div className='button-wrapper'>
-                    <Button variant="outlined"><NavLink to={`${"asd"}`}>Show More</NavLink></Button>
+                    <Button variant="outlined"><NavLink to={`${vin}`}>Show More</NavLink></Button>
                 </div>
 
             </div>      
