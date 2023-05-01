@@ -4,20 +4,17 @@ import 'react-calendar/dist/Calendar.css';
 import dayjs from 'dayjs';
 
 function MyCalendar({ markedDates }) {
-  console.log('markedDates:', markedDates);
 
   const parsedDates = markedDates.map((dateString) => dayjs(dateString).toDate());
 
   return (
     <div>
       <Calendar
-        value={new Date()}
-        tileClassName={({ date }) => {
-          console.log('checking date:', date);
-          return parsedDates.some((markedDate) => dayjs(markedDate).isSame(date, 'day'))
-            ? 'marked'
-            : '';
-        }}
+        tileClassName={({ date }) =>
+            parsedDates.some((markedDate) => dayjs(markedDate).isSame(date, 'day'))
+                ? date.toISOString() === new Date().toISOString() ? '' : 'marked'
+                : ''
+        }
         selectable={false}
       />
     </div>
