@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import AboutUs from "./AboutUs";
 import HomeDatePicker from "../components/HomeDatePicker";
 
-export default function Home({setStartDate, setDropDate, setMaxPrice}){
+export default function Home({startDate, dropDate, setStartDate, setDropDate, setMaxPrice}){
     //Scroll to #about-us
     const location = useLocation();
     useEffect(() => {
@@ -35,7 +35,7 @@ export default function Home({setStartDate, setDropDate, setMaxPrice}){
                     <p className="slogan">Unlock Your Adventure</p>
                 </div>
                 <div className="date-picker">
-                    <HomeDatePicker setStartDate={setStartDate} setDropDate={setDropDate} setMaxPrice={setMaxPrice}/>
+                    <HomeDatePicker startDate={startDate} dropDate={dropDate}setStartDate={setStartDate} setDropDate={setDropDate} setMaxPrice={setMaxPrice}/>
                 </div>
             </main>
             <AboutUs />

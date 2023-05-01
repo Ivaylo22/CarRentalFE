@@ -14,6 +14,7 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import AnimationIcon from '@mui/icons-material/Animation';
 
 import MyCalendar from "./MyCalendar";
+import { CheckBox } from "@mui/icons-material";
 
 export default function DetailedCarCard({detailedCars, startDate, dropDate}) {
     const { vin } = useParams();
@@ -111,8 +112,10 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate}) {
                     <img  className="picture" src={exactCar.imageUrl} alt="Car"/>
                 </div>
             </div>
-            <div className="Dates taken">
-                <MyCalendar markedDates={exactCar.rentDates} />
+            <div className="extras-wrapper">
+                <div>
+                    <MyCalendar markedDates={exactCar.rentDates} />
+                </div>
             </div>
         </div>
     )

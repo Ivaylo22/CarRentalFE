@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { DatePicker } from '@mui/x-date-pickers';
 
 
-export default function HomeDatePicker({setStartDate, setDropDate, setMaxPrice}) {
+export default function HomeDatePicker({startDate,dropDate, setStartDate, setDropDate, setMaxPrice}) {
 
     return (
         <div className="dates-form">
@@ -20,6 +20,7 @@ export default function HomeDatePicker({setStartDate, setDropDate, setMaxPrice})
                 <DemoItem label="DROP-OFF DATE">
                     <DatePicker 
                         onChange={(date) => setDropDate(date)}
+                        minDate={startDate}
                     />
                 </DemoItem>
             </LocalizationProvider>

@@ -45,6 +45,7 @@ export default function Filter({startDate, dropDate, setStartDate, setDropDate, 
                             className="filter-date-picker"
                             value={dayjs(dropDate)}
                             onChange={(date) => setDropDate(date)}
+                            minDate={startDate}
                         />
                     </DemoItem>
                 </LocalizationProvider>

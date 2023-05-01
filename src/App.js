@@ -66,6 +66,8 @@ export default function App() {
                         index
                         element=
                             {<Home 
+                                startDate={startDate}
+                                dropDate={dropDate}
                                 setStartDate={setStartDate}
                                 setDropDate={setDropDate}
                                 setMaxPrice={setMaxPrice}

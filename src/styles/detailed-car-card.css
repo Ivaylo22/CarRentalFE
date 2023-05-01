@@ -35,3 +35,7 @@
 .img-wrapper img{
     width: 100%;
 }
+
+.extras-wrapper {
+    background-color: var(--secondary-background);
+}
