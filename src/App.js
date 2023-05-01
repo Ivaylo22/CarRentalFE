@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import DetailedCarCard from "./components/DetailedCarCard";
 
 import Home from "./views/Home"
 import Catalogue from "./views/Catalogue";
@@ -15,7 +16,7 @@ import "./styles/home.css"
 import "./styles/about-us.css"
 import "./styles/catalogue.css"
 import "./styles/car-card.css"
-import DetailedCarCard from "./components/DetailedCarCard";
+import "./styles/detailed-car-card.css"
 
 
 export default function App() {

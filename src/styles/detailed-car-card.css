@@ -1,0 +1,43 @@
+.detailed-car-wrapper {
+    padding-top: 5vh;
+    width: 60%;
+    margin: 0 auto;
+    height: 50vh;
+}
+
+.main-info-wrapper {
+    background-color: var(--secondary-background);
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    color: var(--secondary-font);
+}
+
+.main-info {
+    width: 40%;
+    font-size: 1vw;
+}
+
+.main-info .model-info {
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    font-size: 1.5vw;
+}
+
+.more-info {
+    padding-top: 5vh;
+}
+
+.img-wrapper {
+    width: 90%;
+}
+
+.img-wrapper img{
+    width: 100%;
+}
+
+.marked {
+    background-color: red;
+    color: #000000;
+    font-weight: bold;
+}

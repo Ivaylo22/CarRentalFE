@@ -16,3 +16,8 @@ export function isAvailableInRange(startDate, endDate, takenDates) {
   
     return true;
 }
+
+export function convertMpgToLitersPer100km(mpg) {
+    const litersPer100Km = 235.215 / mpg;
+    return litersPer100Km.toFixed(2);
+}

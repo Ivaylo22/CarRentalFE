@@ -26,7 +26,6 @@ export default function Filter({startDate, dropDate, setStartDate, setDropDate, 
 
             return true;
         });
-        console.log(filtered)
         setFilteredCars(filtered);
     }
 
