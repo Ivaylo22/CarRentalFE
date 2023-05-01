@@ -38,4 +38,31 @@
 
 .extras-wrapper {
     background-color: var(--secondary-background);
+    color: var(--secondary-font);
+}
+
+.extras-wrapper h1{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5vw;
+    padding-top: 2vh;
+}
+
+.extras-ul {
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0 auto;
+    padding-left: 5%;
+}
+
+.extra-li {
+    flex-basis: 33%; /* Set each child to be one third of the container's width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    clear: both;
+    padding-left: 1%;
+    list-style-type: '\2605';
 }

@@ -11,7 +11,7 @@
     margin: 0 auto;
 }
 
-.filter-params-wrapper * {
+.filter-params-wrapper > * {
     flex: 1;
 }
 

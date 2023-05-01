@@ -14,11 +14,18 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import AnimationIcon from '@mui/icons-material/Animation';
 
 import MyCalendar from "./MyCalendar";
-import { CheckBox } from "@mui/icons-material";
 
 export default function DetailedCarCard({detailedCars, startDate, dropDate}) {
     const { vin } = useParams();
+
     const exactCar = detailedCars.find(car => car.vinNumber === vin)
+
+    const listItems = [];
+    const arrayOfExtras = exactCar.options[0].options.map(item => item.name);
+
+    for (let i = 0; i < 9 && i < arrayOfExtras.length; i++) {
+        listItems.push(<li key={i} className="extra-li">{arrayOfExtras[i]}</li>);
+    }
 
     return (
         <div className="detailed-car-wrapper">
@@ -113,6 +120,12 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate}) {
                 </div>
             </div>
             <div className="extras-wrapper">
+                <h1>Extras</h1>
+                <div>
+                    <ul className="extras-ul">
+                        {listItems}
+                    </ul>
+                </div>
                 <div>
                     <MyCalendar markedDates={exactCar.rentDates} />
                 </div>
