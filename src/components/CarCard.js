@@ -53,17 +53,9 @@ export default function CarCard(props) {
                         </div>    
                     </div>
 
-                    <div className='icon-wrapper'>
-                        <div className='icon'>
-                            <AttachMoneyIcon/>
-                        </div>
-                        <div className='icon-text'>
-                            <p>DAILY RATE {price} BGN</p>
-                        </div>
-                    </div>
-
                 </div>  
                 <div className='button-wrapper'>
+                    <p>{price} BGN / day</p>
                     <Button variant="outlined"><NavLink to={`${vin}`}>Show More</NavLink></Button>
                 </div>
 

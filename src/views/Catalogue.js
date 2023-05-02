@@ -11,19 +11,7 @@ export default function Catalogue({startDate, dropDate, setStartDate, setDropDat
     }, [detailedCars])
 
     return(
-        <div>
-            <Filter 
-                detailedCars={detailedCars}
-                startDate={startDate}
-                dropDate={dropDate}
-                setStartDate={setStartDate} 
-                setDropDate={setDropDate}
-                maxPrice={maxPrice}
-                setMaxPrice={setMaxPrice}
-                fuelType={fuelType}
-                setFuelType={setFuelType}
-                setFilteredCars={setFilteredCars}
-            />
+        <div className="catalogue-wrapper">
             <div className="all-cars-wrapper">
             {filteredCars.map(car => (
                 <CarCard 
@@ -40,6 +28,18 @@ export default function Catalogue({startDate, dropDate, setStartDate, setDropDat
                 />              
             ))}
             </div>
+            <Filter 
+                detailedCars={detailedCars}
+                startDate={startDate}
+                dropDate={dropDate}
+                setStartDate={setStartDate} 
+                setDropDate={setDropDate}
+                maxPrice={maxPrice}
+                setMaxPrice={setMaxPrice}
+                fuelType={fuelType}
+                setFuelType={setFuelType}
+                setFilteredCars={setFilteredCars}
+            />          
         </div>
 
     )

@@ -1,18 +1,28 @@
+.catalogue-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 5vh;
+}
+
 .filter-wrapper {
     padding-top: 3vh;
     padding-left: 5%;
     padding-right: 5%; 
+    background-color: var(--component-background);
+    color: var(--component-font)
 }
 
 .filter-params-wrapper {
     display: flex;
-    justify-content: space-around;
-    gap: 5%;
+    flex-direction: column;
+    gap: 50%;
     margin: 0 auto;
 }
 
 .filter-params-wrapper > * {
-    flex: 1;
+    padding-bottom: 3vh;
 }
 
 .button-wrapper {
@@ -23,8 +33,9 @@
 }
 
 .button-wrapper .button-filter {
-    width: 10%;
-    background-color: var(--secondary-background);
+    width: 50%;
+    background-color: white;
+    color: var(--component-font);
     height: 3vh;
 }
 
@@ -34,22 +45,23 @@
 }
 
 .filter-date-picker .MuiOutlinedInput-notchedOutline {
-    border-color: var(--secondary-background) !important;
+    border-color: var(--component-font) !important;
 }
 
 .filter-date-picker .MuiInputAdornment-root .MuiSvgIcon-root {
-    color: var(--secondary-background);
+    border-color: var(--component-font);
 }
 
 .filter-autocomplete .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-    border-color: var(--secondary-background);
+    border-color: var(--component-font);
 }
 
 .filter-price .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-    border-color: var(--secondary-background);
+    border-color: var(--component-font);
 }
   
 .all-cars-wrapper {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
