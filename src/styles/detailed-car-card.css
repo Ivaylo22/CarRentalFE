@@ -1,44 +1,26 @@
 .detailed-car-wrapper {
+    display: flex;
+    flex-direction: column;
     padding-top: 5vh;
     width: 60%;
     margin: 0 auto;
     height: 50vh;
 }
 
-.main-info-wrapper {
-    background-color: var(--secondary-background);
+.main-extras-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.main-extras-wrapper .icon-wrapper {
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    color: var(--secondary-font);
 }
 
-.main-info {
-    width: 40%;
-    font-size: 1vw;
-}
-
-.main-info .model-info {
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-    font-size: 1.5vw;
-}
-
-.more-info {
-    padding-top: 5vh;
-}
-
-.img-wrapper {
-    width: 90%;
-}
-
-.img-wrapper img{
+.img-wrapper img {
     width: 100%;
-}
-
-.extras-wrapper {
-    background-color: var(--secondary-background);
-    color: var(--secondary-font);
 }
 
 .extras-wrapper h1{

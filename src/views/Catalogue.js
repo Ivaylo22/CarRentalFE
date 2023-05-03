@@ -10,10 +10,13 @@ export default function Catalogue({startDate, dropDate, setStartDate, setDropDat
         setFilteredCars(detailedCars)
     }, [detailedCars])
 
+    console.log(filteredCars.length)
+
     return(
         <div className="catalogue-wrapper">
             <div className="all-cars-wrapper">
-            {filteredCars.map(car => (
+            {         
+            filteredCars.length !== 0 ? filteredCars.map(car => (
                 <CarCard 
                     key={car.vinNumber}
                     make={car.make.name}
@@ -25,8 +28,11 @@ export default function Catalogue({startDate, dropDate, setStartDate, setDropDat
                     gearbox={car.transmission.transmissionType}
                     engine={car.engine.horsepower}
                     price={car.dailyRate}
-                />              
-            ))}
+                />   
+                        
+                )
+            )
+            : <p className="no-cars-found">No cars found.</p>   }
             </div>
             <Filter 
                 detailedCars={detailedCars}

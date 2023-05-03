@@ -28,96 +28,102 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate}) {
     }
 
     return (
+            
+
+
+
+
+
         <div className="detailed-car-wrapper">
+            <p className='model-info'>{exactCar.make.name.toUpperCase()} {exactCar.model.name.toUpperCase()}</p>  
+            <div className="img-wrapper">
+                    <img className="picture" src={exactCar.imageUrl} alt="Car"/>
+            </div> 
+            <div className="main-extras-wrapper">
+                <div className='icon-wrapper'>
+                    <div className='icon'>
+                        <EvStationIcon/>
+                    </div>
+                    <div className='icon-text'> 
+                        <p>{exactCar.fuelType}</p>
+                    </div>
+                    
+                </div>
+
+                <div className='icon-wrapper'>
+                    <div className='icon'>
+                        <CalendarMonthIcon/>
+                    </div>
+                    <div className='icon-text'>
+                        <p>{exactCar.years[0].year}</p>
+                    </div>
+                </div>
+
+                <div className='icon-wrapper'>
+                    <div className='icon'>
+                        <SettingsSuggestIcon/>
+                    </div>
+                    <div className='icon-text'>
+                        <p>{exactCar.transmission.transmissionType}</p>
+                    </div>                    
+                </div>
+
+                <div className='icon-wrapper'>
+                    <div className='icon'>
+                        <SettingsApplicationsIcon/>
+                    </div>
+                    <div className='icon-text'>
+                        <p>{exactCar.engine.horsepower} HP</p>
+                    </div>    
+                </div>
+
+                <div className='icon-wrapper'>
+                    <div className='icon'>
+                        <AttachMoneyIcon/>
+                    </div>
+                    <div className='icon-text'>
+                        <p>DAILY RATE {exactCar.dailyRate} BGN</p>
+                    </div>
+                </div>
+
+                    <div className='icon-wrapper'>
+                        <div className='icon'>
+                            <DirectionsCarIcon/>
+                        </div>
+                        <div className='icon-text'>
+                            <p>{exactCar.categories.vehicleType.toUpperCase()}</p>
+                        </div>
+                    </div>
+                    <div className='icon-wrapper'>
+                        <div className='icon'>
+                            <GasMeterIcon/>
+                        </div>
+                        <div className='icon-text'>
+                            <p>{convertMpgToLitersPer100km(exactCar.mpg.city)} LITERS/100KM</p>
+                        </div>
+                    </div>
+                    <div className='icon-wrapper'>
+                        <div className='icon'>
+                            <SensorDoorIcon/>
+                        </div>
+                        <div className='icon-text'>
+                            <p>{exactCar.numOfDoors} DOORS</p>
+                        </div>
+                    </div>
+                    <div className='icon-wrapper'>
+                        <div className='icon'>
+                            <AnimationIcon/>
+                        </div>
+                        <div className='icon-text'>
+                            <p>{exactCar.engine.cylinder} CYLINDERS</p>
+                        </div>
+            </div>  
+            </div>
             <div className="main-info-wrapper">
                 <div className="main-info">
-                    <p className='model-info'>{exactCar.make.name.toUpperCase()} {exactCar.model.name.toUpperCase()}</p>   
-                    <div className="icons-wrapper">
-                        <div className='icon-wrapper'>
-                            <div className='icon'>
-                                <EvStationIcon/>
-                            </div>
-                            <div className='icon-text'> 
-                                <p>{exactCar.fuelType}</p>
-                            </div>
-                            
-                        </div>
-
-                        <div className='icon-wrapper'>
-                            <div className='icon'>
-                                <CalendarMonthIcon/>
-                            </div>
-                            <div className='icon-text'>
-                                <p>{exactCar.years[0].year}</p>
-                            </div>
-                        </div>
-
-                        <div className='icon-wrapper'>
-                            <div className='icon'>
-                                <SettingsSuggestIcon/>
-                            </div>
-                            <div className='icon-text'>
-                                <p>{exactCar.transmission.transmissionType}</p>
-                            </div>                    
-                        </div>
-
-                        <div className='icon-wrapper'>
-                            <div className='icon'>
-                                <SettingsApplicationsIcon/>
-                            </div>
-                            <div className='icon-text'>
-                                <p>{exactCar.engine.horsepower} HP</p>
-                            </div>    
-                        </div>
-
-                        <div className='icon-wrapper'>
-                            <div className='icon'>
-                                <AttachMoneyIcon/>
-                            </div>
-                            <div className='icon-text'>
-                                <p>DAILY RATE {exactCar.dailyRate} BGN</p>
-                            </div>
-                        </div>
-
-                       <div className="more-info">
-                            <div className='icon-wrapper'>
-                                <div className='icon'>
-                                    <DirectionsCarIcon/>
-                                </div>
-                                <div className='icon-text'>
-                                    <p>{exactCar.categories.vehicleType.toUpperCase()}</p>
-                                </div>
-                            </div>
-                            <div className='icon-wrapper'>
-                                <div className='icon'>
-                                    <GasMeterIcon/>
-                                </div>
-                                <div className='icon-text'>
-                                    <p>{convertMpgToLitersPer100km(exactCar.mpg.city)} LITERS/100KM</p>
-                                </div>
-                            </div>
-                            <div className='icon-wrapper'>
-                                <div className='icon'>
-                                    <SensorDoorIcon/>
-                                </div>
-                                <div className='icon-text'>
-                                    <p>{exactCar.numOfDoors} DOORS</p>
-                                </div>
-                            </div>
-                            <div className='icon-wrapper'>
-                                <div className='icon'>
-                                    <AnimationIcon/>
-                                </div>
-                                <div className='icon-text'>
-                                    <p>{exactCar.engine.cylinder} CYLINDERS</p>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>                                      
+                                                        
                 </div>
-                <div className="img-wrapper">
-                    <img  className="picture" src={exactCar.imageUrl} alt="Car"/>
-                </div>
+                
             </div>
             <div className="extras-wrapper">
                 <h1>Extras</h1>

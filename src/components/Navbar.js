@@ -7,7 +7,7 @@ export default function Navbar(props){
     return(
         <div className='body-wrapper'>
             <nav className="navigation-wrapper">
-                <img src={logo} alt="Logo"/>
+                <NavLink to="/"><img src={logo} alt="Logo"/></NavLink>
                 <div className="buttons-wrapper">
                     <NavLink to="/"><Button variant="text">Home</Button></NavLink>
                     <NavLink to="catalogue"><Button variant="text">Catalogue</Button></NavLink>

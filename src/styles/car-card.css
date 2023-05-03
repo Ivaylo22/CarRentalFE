@@ -1,7 +1,7 @@
 .car-card-wrapper {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 250px;
     margin-bottom: 3vh;
     background-color: var(--component-background);
     color: var(--component-font)
@@ -55,18 +55,25 @@
 
 .button-wrapper {
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    width: 100%;
     padding-bottom: 2vh;
     padding-top: 1vh;
+    padding-right: 3%;
     margin: 0 auto;
     align-items: center;
     gap: 5%;
+}
+
+.button-wrapper button {
+    font-size: 1vw;
 }
 
 .button-wrapper p {
     color: var(--secondary-font);
     font-weight: bold;
     font-style: italic;
+    padding-bottom: 5%;
 }
 
 .button-wrapper .MuiButton-outlined {
