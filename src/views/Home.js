@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import AboutUs from "./AboutUs";
+
 import HomeDatePicker from "../components/HomeDatePicker";
+import AboutUs from "./AboutUs";
+import ContactUs from "./ContactUs";
 
 export default function Home({startDate, dropDate, setStartDate, setDropDate, setMaxPrice}){
     //Scroll to #about-us
@@ -39,6 +41,7 @@ export default function Home({startDate, dropDate, setStartDate, setDropDate, se
                 </div>
             </main>
             <AboutUs />
+            <ContactUs />
         </div>
 
     )

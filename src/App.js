@@ -18,8 +18,7 @@ import "./styles/catalogue.css"
 import "./styles/car-card.css"
 import "./styles/detailed-car-card.css"
 import "./styles/calendar.css"
-
-
+import "./styles/contact-us.css"
 
 
 export default function App() {

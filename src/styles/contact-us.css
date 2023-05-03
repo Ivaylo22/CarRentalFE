@@ -1,0 +1,100 @@
+.contact-us{
+    height: 60vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact-us h1 {
+    padding-top: 5vh;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5vw;
+    color: var(--component-font);
+}
+
+.contact-us-wrapper {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.map-wrapper {
+    width: 40%;
+}
+
+.map {
+    width: 100%;
+    height: 40vh;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.form-wrapper p {
+    color: var(--secondary-font);
+}
+
+.type-contact {
+    font-size: 1.2vw;
+    color: var(--component-font) !important;
+}
+
+
+.names {
+    display: flex;
+    padding-top: 2vh;
+    justify-content: space-between;
+}
+
+.question {
+    padding-top: 2vh;
+    height: 12vh;
+}
+
+.question input {
+    height: 100%;
+}
+
+.button-wrapper {
+    padding-top: 3vh;
+}
+
+
+.button-wrapper .button-send {
+    font-weight: bold;
+    background-color: var(--secondary-background);
+    color: var(--component-font);
+}
+
+.button-wrapper .button-send:hover {
+    background-color: var(--component-background);
+    color: var(--secondary-font);
+    box-shadow: 0px 0px 10px #888;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+}
+
+.numbers p {
+    padding-right: 5%;
+}
+
+.number {
+    padding-left: 1%;
+    font-size: 1vw;
+}
+
+.fixed-textarea {
+    resize: none;
+    height: 10vh;
+} 
+
+.phone-icon {
+    color: var(--secondary-font)
+}
