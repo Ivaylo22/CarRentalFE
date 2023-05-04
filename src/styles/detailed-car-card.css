@@ -1,50 +1,68 @@
 .detailed-car-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5vh;
+    padding-top: 6vh;
     width: 60%;
     margin: 0 auto;
-    height: 50vh;
-}
-
-.main-extras-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
 }
 
-.main-extras-wrapper .icon-wrapper {
+.main-content {
+    display: flex;
+}
+
+.main-content .full-icons-wrapper {
+    display: flex;
+    flex-basis: 33%;
+}
+
+.main-content .icons-wrapper {
+    background-color: var(--secondary-background);
+    color: var(--secodary-font);
+    padding: 0;
+    padding-top: 2vh;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    justify-content: start;
+    gap: 1%;
+    flex-grow: 3;
+    font-size: 1vw;
 }
 
-.img-wrapper img {
-    width: 100%;
-}
-
-.extras-wrapper h1{
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.5vw;
-    padding-top: 2vh;
-}
-
-.extras-ul {
-    height: 15vh;
+.main-content .icon-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    margin: 0 auto;
+}
+
+.main-content .icon {
     padding-left: 5%;
 }
 
-.extra-li {
-    flex-basis: 33%; /* Set each child to be one third of the container's width */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    clear: both;
-    padding-left: 1%;
-    list-style-type: '\2605';
+.main-content .icon-text {
+    vertical-align: middle;
+    align-self: center;
+    padding-left: 2%;
+}
+
+.main-content .price {
+    background-color: var(--component-background);
+    color: var(--component-font);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.price .icon-text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.main-content .img-wrapper {
+    height: 35vh;
+    flex-basis: 66%;
+}
+
+.main-content .img-wrapper img{
+    width: 100%;
+    height: 100%;
 }

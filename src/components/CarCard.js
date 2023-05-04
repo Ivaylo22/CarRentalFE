@@ -1,7 +1,6 @@
 import EvStationIcon from '@mui/icons-material/EvStation';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 
 import { NavLink } from 'react-router-dom';

@@ -9,9 +9,7 @@ export default function Catalogue({startDate, dropDate, setStartDate, setDropDat
     useEffect(() => {
         setFilteredCars(detailedCars)
     }, [detailedCars])
-
-    console.log(filteredCars.length)
-
+    
     return(
         <div className="catalogue-wrapper">
             <div className="all-cars-wrapper">

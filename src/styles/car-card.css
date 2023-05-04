@@ -25,35 +25,35 @@
 }
 
 
-.model-info {
+.car-card-wrapper .model-info {
     text-align: center;
     font-weight: bold;
     font-size: 1vw;
     padding-top: 1vh;
 }
 
-.icons-wrapper {
+.car-card-wrapper .icons-wrapper {
     padding-top: 1vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.icon-wrapper {
+.car-card-wrapper .icon-wrapper {
     display: flex;
 }
 
-.icon {
+.car-card-wrapper .icon {
     width: 20%;
     align-self: center;
 }
 
-.icon-text {
+.car-card-wrapper .icon-text {
     width: 100%;
     padding-left: 5%;
 }
 
-.button-wrapper {
+.car-card-wrapper .button-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -65,27 +65,27 @@
     gap: 5%;
 }
 
-.button-wrapper button {
+.car-card-wrapper .button-wrapper button {
     font-size: 1vw;
 }
 
-.button-wrapper p {
+.car-card-wrapper .button-wrapper p {
     color: var(--secondary-font);
     font-weight: bold;
     font-style: italic;
     padding-bottom: 5%;
 }
 
-.button-wrapper .MuiButton-outlined {
+.car-card-wrapper .button-wrapper .MuiButton-outlined {
     border-color: var(--secondary-font);
 }
 
-.button-wrapper .MuiButton-outlined:hover {
+.car-card-wrapper .button-wrapper .MuiButton-outlined:hover {
     border-color: var(--secondary-font);
     background-color: var(--secondary-background);
     color: var(--secondary-font)
 }
 
-.button-wrapper a {
+.car-card-wrapper .button-wrapper a {
     color: var(--secondary-font);
 }
