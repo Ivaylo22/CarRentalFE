@@ -6,7 +6,7 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 
 export default function Home({startDate, dropDate, setStartDate, setDropDate, setMaxPrice}){
-    //Scroll to #about-us
+    //Smooth scroll
     const location = useLocation();
     useEffect(() => {
         if (location.hash) {

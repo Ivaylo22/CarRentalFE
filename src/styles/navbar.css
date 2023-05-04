@@ -23,3 +23,11 @@
     font-weight: bold;
     font-size: large;
 }
+
+.buttons-wrapper .active {
+    border-bottom: 2px solid var(--secondary-font);
+}
+
+.buttons-wrapper .non-active {
+    border: 0px;
+}
