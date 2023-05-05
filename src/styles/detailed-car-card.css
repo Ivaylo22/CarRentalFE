@@ -1,8 +1,9 @@
 .detailed-car-wrapper {
-    padding-top: 6vh;
+    padding-top: 5vh;
     width: 60%;
     margin: 0 auto;
     display: flex;
+    gap: 2%;
 }
 
 .general-info {
@@ -77,10 +78,11 @@
     padding-top: 3vh;
 }
 
-.additions h1 {
+.additions h1, .conditions h1 {
     font-size: 1.3vw;
     padding-bottom: 1vh;
     font-style: italic;
+    padding-left: 2%;
 }
 
 .extras-ul {
@@ -97,6 +99,90 @@
     padding: 5px;
 }
 
+.conditions {
+    padding-top: 2vh;
+    background-color: var(--component-background);
+    color: var(--component-font);
+}
+
+.conditions ul {
+    padding-left: 6%;
+    padding-top: 2vh;
+    font-size: 1vw;
+    width: 80%;
+    list-style-type: '\25CF';
+}
+
+.conditions li {
+    padding-bottom: 2vh;
+    padding-left: 2%;
+}
+
+.right-side {
+    background-color: var(--component-background);
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side .calendar {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.calendar-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 0.5px solid var(--component-font);
+    padding: 0;
+    padding-bottom: 1vh;
+}
+
+.legend {
+    display: flex; 
+    padding-top: 1vh;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 2%;
+}
+
+
+.circle {
+    width: 30px;
+    height: 20px;
+    background-color: var(--secondary-background);
+    border-radius: 50%;
+}
+
+.wrapper-title {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    color: var(--component-font);
+}
+
+.detail-dates {
+    padding-top: 1vh;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 85%;
+    margin: 0 auto;
+    border: 0.5px solid var(--component-font);
+}
+
+.detail-dates .filter-date-picker, .detail-dates .filter-autocomplete{
+    background-color: white;
+}
+
+.detail-dates >* {
+    padding-bottom: 2vh;
+}
+
+/* CALENDAR ONLY */
 .marked {
     border-radius: 25px;
     background-color: var(--secondary-background) !important;

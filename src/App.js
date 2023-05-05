@@ -26,6 +26,7 @@ export default function App() {
     const [maxPrice, setMaxPrice] = useState(null);
     const [startDate, setStartDate]  = useState(null);
     const [dropDate, setDropDate] = useState(null);
+    const [location, setLocation] = useState("");
 
     useEffect(() => {
         const fetchCars = async () => {
@@ -91,6 +92,10 @@ export default function App() {
                                 detailedCars={detailedCars}
                                 startDate={startDate}
                                 dropDate={dropDate}
+                                setStartDate={setStartDate}
+                                setDropDate={setDropDate}
+                                location={location}
+                                setLocation={setLocation}
                             />}
                         />
                     <Route

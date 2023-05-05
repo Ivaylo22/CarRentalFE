@@ -8,7 +8,7 @@ function MyCalendar({ markedDates }) {
   const parsedDates = markedDates.map((dateString) => dayjs(dateString).toDate());
 
   return (
-    <div>
+    <div className='calendar'>
       <Calendar
         tileClassName={({ date }) =>
             parsedDates.some((markedDate) => dayjs(markedDate).isSame(date, 'day'))
