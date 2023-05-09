@@ -39,11 +39,14 @@
     background-color: var(--secondary-background);
     color: var(--component-font);
     height: 3vh;
+    color: white;
+    font-weight: bold;
 }
 
 .button-wrapper .button-filter:hover {
-    background-color: white;
+    background-color: var(--secondary-background);
     box-shadow: 0px 0px 10px #888;
+    color: var(--secondary-text);
 }
 
 .filter-date-picker .MuiOutlinedInput-notchedOutline {

@@ -54,7 +54,8 @@ export default function CarCard(props) {
 
                 </div>  
                 <div className='button-wrapper'>
-                    <p>{price} BGN / day</p>
+                    <p className='price'>{price} BGN / day</p>
+                    <p className='italic discount'>-10% IF LOGGED IN</p>
                     <Button variant="outlined"><NavLink to={`${vin}`}>Show More</NavLink></Button>
                 </div>
 

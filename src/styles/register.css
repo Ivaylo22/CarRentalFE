@@ -1,0 +1,53 @@
+.register-wrapper {
+    margin: 0 auto;
+    width: 80%;
+    height: 40vh;
+    background-color: var(--component-background);
+    margin-top: 5vh;
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5vh;
+}
+
+.register-inputs {
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.register-wrapper .buttons {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.register-wrapper .input {
+    background-color: white;
+    width: 80%;
+}
+
+.register-wrapper .input input{
+    height: 2vh;
+}
+
+.register-inputs >* {
+    width: 30%;
+}
+
+.register-wrapper .button-register {
+    width: 100%;
+    background-color: var(--secondary-background);
+    color: var(--component-font);
+    height: 3vh;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+}
+
+.register-wrapper .button-register:hover {
+    box-shadow: 0px 0px 10px #888;
+    color: var(--component-font);
+    background-color: var(--secondary-background);
+}

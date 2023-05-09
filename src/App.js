@@ -8,6 +8,8 @@ import Home from "./views/Home"
 import Catalogue from "./views/Catalogue";
 import AboutUs from "./views/AboutUs";
 import ContactUs from "./views/ContactUs";
+import Login from "./views/Login"
+import Register from "./views/Register"
 
 import "./styles/global.css"
 import "./styles/variables.css"
@@ -18,6 +20,10 @@ import "./styles/catalogue.css"
 import "./styles/car-card.css"
 import "./styles/detailed-car-card.css"
 import "./styles/contact-us.css"
+import "./styles/calendar.css"
+import "./styles/login.css"
+import "./styles/register.css"
+
 
 
 export default function App() {
@@ -27,6 +33,8 @@ export default function App() {
     const [startDate, setStartDate]  = useState(null);
     const [dropDate, setDropDate] = useState(null);
     const [location, setLocation] = useState("");
+    const [addPrice, setAddPrice] = useState(0);
+    const [isLogged, setIsLogged] = useState(false);
 
     useEffect(() => {
         const fetchCars = async () => {
@@ -60,7 +68,7 @@ export default function App() {
         createRoutesFromElements(
             <Route 
                 path="/" 
-                element={<Navbar/>}>
+                element={<Navbar isLogged={isLogged} setIsLogged={setIsLogged}/>}>
                     <Route
                         index
                         element=
@@ -96,15 +104,38 @@ export default function App() {
                                 setDropDate={setDropDate}
                                 location={location}
                                 setLocation={setLocation}
+                                addPrice={addPrice}
+                                setAddPrice={setAddPrice}
                             />}
                         />
                     <Route
                         path="about-us"
                         element={<AboutUs/>} >
                     </Route>
+
                     <Route
                         path="contact-us"
                         element={<ContactUs/>} >
+                    </Route>
+                    
+                    <Route
+                        path="login"
+                        element={
+                        <Login
+                            isLogged={isLogged}
+                            setIsLogged={setIsLogged}
+                        />}
+                    >            
+                    </Route>
+
+                    <Route
+                        path="register"
+                        element={
+                        <Register
+                            isLogged={isLogged}
+                            setIsLogged={setIsLogged}
+                        />}
+                    >            
                     </Route>
             </Route>
         )

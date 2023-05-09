@@ -6,6 +6,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .body-wrapper {
     height: 100vh;
 }

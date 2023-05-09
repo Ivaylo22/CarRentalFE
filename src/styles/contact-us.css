@@ -67,7 +67,7 @@
 .button-wrapper .button-send {
     font-weight: bold;
     background-color: var(--secondary-background);
-    color: var(--component-font);
+    color: white;
 }
 
 .button-wrapper .button-send:hover {

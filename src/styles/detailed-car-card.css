@@ -9,6 +9,7 @@
 .general-info {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .main-content {
@@ -120,6 +121,7 @@
 
 .right-side {
     background-color: var(--component-background);
+    color: var(--component-font);
     padding-top: 2vh;
     display: flex;
     flex-direction: column;
@@ -174,6 +176,10 @@
     border: 0.5px solid var(--component-font);
 }
 
+.detail-dates .filter-date-picker input, .detail-dates .filter-autocomplete input {
+    height: 3px;
+}
+
 .detail-dates .filter-date-picker, .detail-dates .filter-autocomplete{
     background-color: white;
 }
@@ -182,60 +188,60 @@
     padding-bottom: 2vh;
 }
 
-/* CALENDAR ONLY */
-.marked {
-    border-radius: 25px;
-    background-color: var(--secondary-background) !important;
-    color: #000000;
-    font-weight: bold;
+.price-italic {
+    font-style: italic;
 }
 
-.marked :hover{
-    border-radius: 25px;
-    background-color: var(--secondary-background) !important;
-    color: #000000;
-    font-weight: bold;
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    width: 90%;
+    margin: 0 auto;
+    border: 0.5px solid var(--component-font);
+    padding-left: 3%;
+    padding-top: 1vh;
 }
 
-.react-calendar__tile:enabled:hover,
-.react-calendar__tile:disabled:focus {
-    background-color: transparent;
-    color: inherit;
+.features input {
+    margin-right: 5%;
+    margin-bottom: 1vh;
 }
 
-.react-calendar__tile--now {
-    background-color: transparent;
-    color: inherit;
+.insurance {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border: 0.5px solid var(--component-font);
+    margin: 0 auto;
+    padding-top: 1vh;
+    padding-left: 3%;
 }
 
-.react-calendar__tile--now:enabled:hover,
-.react-calendar__tile--now:enabled:focus {
-     background-color: transparent;
-     color: inherit;
+.insurance >* {
+    padding-bottom: 1vh;
 }
 
-.react-calendar__tile--hasActive {
-    background-color: transparent;
-    color: inherit;
+.insurance input {
+    margin-right: 3%;
 }
 
-.react-calendar__tile--hasActive:enabled:hover,
-.react-calendar__tile--hasActive:enabled:focus {
-    background-color: transparent;
-    color: inherit;
-}
-.react-calendar__tile--active {
-    background-color: transparent;
-    color: inherit;
-}
-.react-calendar__tile--active:enabled:hover,
-.react-calendar__tile--active:enabled:focus {
-    background-color: transparent;
-}
-.react-calendar--selectRange .react-calendar__tile--hover {
-    background-color: transparent;
+.insurance label {
+    display: flex;
 }
 
-.react-calendar__month-view__days__day--weekend {
-    color: black;
+.final-prices {
+    padding-top: 2vh;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+.right-side .button-wrapper {
+    padding: 0;
+    padding-top: 1vh;
+}
+
+.right-side .button-filter {
+    width: 100%;
 }
