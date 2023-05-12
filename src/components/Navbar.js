@@ -22,8 +22,8 @@ export default function Navbar({isLogged, setIsLogged}){
                     <NavLink to="/#about-us"  className={location.pathname === "/" ? "non-active" : ""}><Button variant="text">About Us</Button></NavLink>
                     <NavLink to="/#contact-us"  className={location.pathname === "/" ? "non-active" : ""}><Button variant="text">Contact Us</Button></NavLink>
                     {!isLogged 
-                        ? <NavLink to="/login" className={location.pathname === "/" ? "non-active" : ""}><Button><LoginIcon fontSize='small'/></Button></NavLink> 
-                        : <NavLink className={location.pathname === "/" ? "non-active" : ""}><Button onClick={logout}><LogoutIcon fontSize='small'/></Button></NavLink> }
+                        ? <NavLink to="/login" className={location.pathname === "/" ? "non-active" : ""}><Button>Log in <p>&nbsp;&nbsp;</p> <LoginIcon fontSize='small' className='log-icon'/></Button></NavLink> 
+                        : <NavLink className={location.pathname === "/" ? "non-active" : ""}><Button onClick={logout}>Log out <p>&nbsp;&nbsp;</p> <LogoutIcon fontSize='small' className='log-icon'/></Button></NavLink> }
                     
                 </div>
             </nav>

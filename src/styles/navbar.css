@@ -31,3 +31,7 @@
 .buttons-wrapper .non-active {
     border: 0px;
 }
+
+.log-icon {
+    width: 100%;
+}
