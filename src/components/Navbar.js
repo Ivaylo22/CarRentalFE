@@ -4,6 +4,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 import logo from '../images/logo.png'
+import Footer from './Footer';
 
 export default function Navbar({isLogged, setIsLogged}){
    const location = useLocation();
@@ -28,6 +29,7 @@ export default function Navbar({isLogged, setIsLogged}){
                 </div>
             </nav>
             <Outlet />
+            <Footer/>
         </div>
 
     )

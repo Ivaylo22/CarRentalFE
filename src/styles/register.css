@@ -51,3 +51,7 @@
     color: var(--component-font);
     background-color: var(--secondary-background);
 }
+
+.register-visual-height {
+    height: 75vh;
+}

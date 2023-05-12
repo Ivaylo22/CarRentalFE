@@ -1,0 +1,36 @@
+.footer-wrapper {
+    height: 10vh;
+    background-color: #3a3a3a;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    padding: 0;
+    padding-left: 5%;
+}
+
+.footer-wrapper img {
+    width: 7vh;
+    height: 7vh;
+}
+
+.footer-wrapper p {
+    color: #bebebe;
+    text-align: center;
+}
+
+.socials-wrapper {
+    padding-left: 20%;
+    width: 10%;
+}
+
+.footer-wrapper a {
+    color: inherit;
+}
+
+.social:hover {
+    color: #bebebe;
+}
+
+.rights-reserved {
+    padding-left: 35%;
+}

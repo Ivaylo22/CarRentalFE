@@ -27,7 +27,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
     };
 
     const handleRentClick = () => {
-        if (location === null) {
+        if (location.length===0) {
             setErrorType("noLocation");
             setOpenDialog(true);
         }
@@ -83,7 +83,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
     for (let i = 0; i < 9 && i < arrayOfExtras.length; i++) {
         listItems.push(<li key={i} className="extra-li">{arrayOfExtras[i]}</li>);
     }
-
+    
     return (
         <div className="detailed-car-wrapper">
             <div className="general-info">
@@ -277,7 +277,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                 <h3 className="wrapper-title">SELECT INSURANCE PLAN</h3>
                 <div className="insurance">
                     <label>
-                        <input type="radio" name="myRadio" value="0" onClick={calculateExtraTaxes}/>
+                        <input type="radio" name="myRadio" value="0" onClick={calculateExtraTaxes} defaultChecked  />
                         <div>
                             <p className="plan-name">PLAN 1 (<span className="price-italic">DEFAULT </span>)</p>
                             <p className="plan-description"> plan description: includes this and this</p>

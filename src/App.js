@@ -23,6 +23,7 @@ import "./styles/contact-us.css"
 import "./styles/calendar.css"
 import "./styles/login.css"
 import "./styles/register.css"
+import "./styles/footer.css"
 
 
 

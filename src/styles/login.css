@@ -69,3 +69,13 @@
     padding-top: 2vh;
     color: blue;
 }
+
+.login-visual-height {
+    height: 70vh;
+}
+
+.socials {
+    padding-top: 1vh;
+    display: flex;
+    justify-content: space-around;
+}
