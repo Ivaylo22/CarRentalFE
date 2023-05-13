@@ -36,7 +36,7 @@
 }
 
 .register-wrapper .button-register {
-    width: 100%;
+    width: 80%;
     background-color: var(--secondary-background);
     color: var(--component-font);
     height: 3vh;
@@ -55,3 +55,17 @@
 .register-visual-height {
     height: 75vh;
 }
+
+.error-message {
+    font-size: 0.8vw;
+    padding-left: 2%;
+    vertical-align: middle;
+    display: flex;
+    gap: 2%;
+    width: 80%;
+}
+
+.warning-icon {
+    color: red;
+}
+

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 import { convertMpgToLitersPer100km, isAvailableInRange, locations } from "../Helpers";
 import MyCalendar from "./MyCalendar"
@@ -16,30 +16,46 @@ import { DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function DetailedCarCard({detailedCars, startDate, dropDate, setStartDate, setDropDate, location, setLocation, addPrice, setAddPrice}) {
+export default function DetailedCarCard({detailedCars, startDate, dropDate, setStartDate, setDropDate, location, setLocation, addPrice, setAddPrice, setTotalPrice, setCarId}) {
     const [errorType, setErrorType] = useState("");
     const [openDialog, setOpenDialog] = useState(false);
+
+    useEffect(() => {
+        return () => {   
+          setAddPrice("0.00");
+          setLocation("");
+        };
+    }, [setAddPrice, setLocation]);
 
     const handleCloseDialog = () => {
         setOpenDialog(false);
     };
 
-    const handleRentClick = () => {
+    const handleRentClick = (event) => {
         if (location.length===0) {
+            event.preventDefault();
             setErrorType("noLocation");
             setOpenDialog(true);
         }
+        if(startDate === null || dropDate === null) {
+            event.preventDefault();
+            setErrorType("invalidDate");
+            setOpenDialog(true);
+        }
         if (startDate && dropDate && dropDate.isBefore(startDate)) {
+            event.preventDefault();
             setErrorType("invalidDate");
             setOpenDialog(true);
         } 
         if(!isAvailableInRange(startDate, dropDate, exactCar.rentDates)) {
+            event.preventDefault();
             setErrorType("invalidDate");
             setOpenDialog(true);
         }
-        
+        setTotalPrice((parseFloat(exactCar.dailyRate) + parseFloat(addPrice)).toFixed(2))
+        setCarId(exactCar.vinNumber)
     }
     
     const { vin } = useParams();
@@ -293,7 +309,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                     <label>
                         <input type="radio" name="myRadio" value="49.99" onClick={calculateExtraTaxes}/>
                         <div>
-                            <p className="plan-name">PLAN 1 (<span className="price-italic">+49.99 BGN </span>)</p>
+                            <p className="plan-name">PLAN 3 (<span className="price-italic">+49.99 BGN </span>)</p>
                             <p className="plan-description"> plan description: includes this and this</p>
                         </div>
                     </label>
@@ -304,7 +320,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                 </div>
                 
                 <div className="button-wrapper">
-                    <Button className='button-filter' variant="contained" onClick={handleRentClick}>RENT NOW</Button>
+                    <NavLink to={'../confirmation'}> <Button className='button-filter' variant="contained" onClick={handleRentClick}>RENT NOW</Button></NavLink>
                 </div>
                 
             </div>
@@ -322,7 +338,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                 )}
                 
                 <DialogActions>
-                <Button onClick={handleCloseDialog}>OK</Button>
+                    <Button onClick={handleCloseDialog}>OK</Button>
                 </DialogActions>
             </Dialog>
         </div>

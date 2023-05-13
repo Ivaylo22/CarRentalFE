@@ -10,6 +10,7 @@ import AboutUs from "./views/AboutUs";
 import ContactUs from "./views/ContactUs";
 import Login from "./views/Login"
 import Register from "./views/Register"
+import Confirmation from "./views/Confirmation";
 
 import "./styles/global.css"
 import "./styles/variables.css"
@@ -24,8 +25,7 @@ import "./styles/calendar.css"
 import "./styles/login.css"
 import "./styles/register.css"
 import "./styles/footer.css"
-
-
+import "./styles/confirmation.css"
 
 export default function App() {
     const [cars, setCars] = useState([]);
@@ -36,6 +36,8 @@ export default function App() {
     const [location, setLocation] = useState("");
     const [addPrice, setAddPrice] = useState(0);
     const [isLogged, setIsLogged] = useState(false);
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [carId, setCarId] = useState(0);
 
     useEffect(() => {
         const fetchCars = async () => {
@@ -44,9 +46,8 @@ export default function App() {
 
         setCars(data);
         };
-
         fetchCars();
-    }, []);
+    }, [totalPrice]);
 
     useEffect(() => {
         const fetchCarDetails = async () => {
@@ -107,6 +108,8 @@ export default function App() {
                                 setLocation={setLocation}
                                 addPrice={addPrice}
                                 setAddPrice={setAddPrice}
+                                setTotalPrice={setTotalPrice}
+                                setCarId={setCarId}
                             />}
                         />
                     <Route
@@ -138,10 +141,27 @@ export default function App() {
                         />}
                     >            
                     </Route>
+
+                    <Route
+                        path="confirmation"
+                        element={
+                        <Confirmation
+                            isLogged={isLogged}
+                            carId={carId}
+                            totalPrice={totalPrice}
+                            startDate={startDate}
+                            dropDate={dropDate}
+                            setStartDate={setStartDate}
+                            setDropDate={setDropDate}
+                            setCarId={setCarId}
+                            setTotalPrice={setTotalPrice}
+                        />}
+                    >            
+                    </Route>
             </Route>
         )
     )
-
+    
     return (
         <div className="global-wrapper">
             <RouterProvider router={router} />

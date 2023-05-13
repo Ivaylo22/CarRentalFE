@@ -1,8 +1,73 @@
-import { Button, TextField } from "@mui/material";
-import { DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+import { Button, Dialog, DialogContent, DialogTitle, TextField } from "@mui/material";
+import { DemoItem } from "@mui/x-date-pickers/internals/demo";
+import WarningIcon from '@mui/icons-material/Warning';
+
 export default function Register({isLogged, setIsLogged}) {
+    const [openDialog, setOpenDialog] = useState(false);
+
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorEmail, setErrorEmail] = useState('');
+    const [errorPhone, setErrorPhone] = useState('');
+    const [errorPassword, setErrorPassword] = useState('');
+
+    const handleCloseDialog = () => {
+        setOpenDialog(false);
+    };
+
+    const handleEmailChange = (e) => {
+        const inputEmail = e.target.value;
+        setEmail(inputEmail);
+    
+        if (!validateEmail(inputEmail)) {
+            setErrorEmail('Invalid email format');
+        } else {
+            setErrorEmail('');
+        }
+      };
+    
+    const validateEmail = (email) => {
+        // Regular expression for email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    const handlePhoneChange = (e) => {
+        const inputPhoneNumber = e.target.value;
+        setPhoneNumber(inputPhoneNumber);
+    
+        if (!validatePhoneNumber(inputPhoneNumber)) {
+            setErrorPhone('Please enter a 10-digit number.');
+        } else {
+            setErrorPhone('');
+        }
+      };
+    
+      const validatePhoneNumber = (phoneNumber) => {
+        const phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phoneNumber);
+      };
+
+      const handlePasswordChange = (e) => {
+        const inputPassword = e.target.value;
+        setPassword(inputPassword);
+    
+        if (!validatePassword(inputPassword)) {
+            setErrorPassword('Invalid password format. Please enter a password with at least 6 characters, including uppercase, lowercase, and a digit.');
+        } else {
+            setErrorPassword('');
+        }
+      };
+    
+      const validatePassword = (password) => {
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        return passwordRegex.test(password);
+      };
+
     function register(event) {
       
         const firstNameInput = document.getElementById('first-name-input');
@@ -32,14 +97,6 @@ export default function Register({isLogged, setIsLogged}) {
             return;
         }
       
-        // Check if email is valid
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value)) {
-            alert('Invalid email address.');
-            event.preventDefault();
-            return;
-        }
-      
         // Check if phone number is valid
         const phoneNumber = phoneInput.value.trim();
         if (!/^\d{10}$/.test(phoneNumber)) {
@@ -56,31 +113,36 @@ export default function Register({isLogged, setIsLogged}) {
         phoneInput.value = '';
         passwordInput.value = '';
         repeatPasswordInput.value = '';
-      
-        alert('Registration successful!');
+        
+        event.preventDefault();
+        setOpenDialog(true);
     }
 
     return (
         <div className="register-visual-height">
             <div className="register-wrapper">
                 <div className="register-inputs">
-                    <DemoItem label="First Name:" className="input-wrapper">
+                    <DemoItem label="First Name: *" className="input-wrapper">
                         <TextField className='input' id="first-name-input" variant="outlined" />
                     </DemoItem>
-                    <DemoItem label="Last Name:">
+                    <DemoItem label="Last Name: *">
                         <TextField className='input' id="last-name-input" variant="outlined"/>
                     </DemoItem>
-                    <DemoItem label="Email:">
-                        <TextField className='input' id="email-input" variant="outlined" type="email" />
+                    <DemoItem label="Email: *">
+                        <TextField className='input' id="email-input" variant="outlined" type="email" onChange={handleEmailChange} value={email}/>
+                        {errorEmail && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorEmail}</span>}
                     </DemoItem>
-                    <DemoItem label="Phone Number:">
-                        <TextField className='input' id="phone-input" variant="outlined" />
+                    <DemoItem label="Phone Number: *">
+                        <TextField className='input' id="phone-input" variant="outlined" value={phoneNumber} onChange={handlePhoneChange} type="tel"/>
+                        {errorPhone && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPhone}</span>}
                     </DemoItem>
-                    <DemoItem label="Password:">
-                        <TextField className='input' id="password-input" variant="outlined" type="password" />
+                    <DemoItem label="Password: *">
+                        <TextField className='input' id="password-input" variant="outlined" type="password" value={password} onChange={handlePasswordChange}/>
+                        {errorPassword && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPassword}</span>}
                     </DemoItem>
-                    <DemoItem label="Repeat Password:">
+                    <DemoItem label="Repeat Password: *">
                         <TextField className='input' id="repeat-password-input" variant="outlined" type="password" />
+        
                     </DemoItem>
                 </div>
                 <div className="buttons">
@@ -89,6 +151,15 @@ export default function Register({isLogged, setIsLogged}) {
                     </NavLink>
                 </div>
         </div>
+        <Dialog open={openDialog} onClose={handleCloseDialog} className="dialog-box">
+            <DialogTitle>Successfull registration</DialogTitle>
+            <DialogContent>
+                <p>Your registration was Successfull!</p>
+                <div className="dialog-buttons">
+                    <Button className='button-login' variant="contained"><NavLink to={"/"} className="button-text">OK</NavLink></Button>
+                </div>
+            </DialogContent>
+        </Dialog>
       </div>
     )
 }

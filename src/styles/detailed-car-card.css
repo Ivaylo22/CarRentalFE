@@ -140,6 +140,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     border: 0.5px solid var(--component-font);
+    border-radius: 5px;
     padding: 0;
     padding-bottom: 1vh;
 }
@@ -176,6 +177,7 @@
     width: 85%;
     margin: 0 auto;
     border: 0.5px solid var(--component-font);
+    border-radius: 5px;
 }
 
 .detail-dates .filter-date-picker input, .detail-dates .filter-autocomplete input {
@@ -201,6 +203,7 @@
     width: 90%;
     margin: 0 auto;
     border: 0.5px solid var(--component-font);
+    border-radius: 5px;
     padding-left: 3%;
     padding-top: 1vh;
 }
@@ -215,6 +218,7 @@
     flex-direction: column;
     width: 90%;
     border: 0.5px solid var(--component-font);
+    border-radius: 5px;
     margin: 0 auto;
     padding-top: 1vh;
     padding-left: 3%;
@@ -246,4 +250,8 @@
 
 .right-side .button-filter {
     width: 100%;
+}
+
+.right-side *:hover {
+    color: inherit;
 }
