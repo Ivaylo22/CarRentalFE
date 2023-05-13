@@ -49,6 +49,13 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
             setErrorType("invalidDate");
             setOpenDialog(true);
         } 
+
+        if (dayjs(startDate).isBefore(dayjs(), "day")) {
+            event.preventDefault();
+            setErrorType("invalidDate");
+            setOpenDialog(true);
+        } 
+
         if(!isAvailableInRange(startDate, dropDate, exactCar.rentDates)) {
             event.preventDefault();
             setErrorType("invalidDate");
