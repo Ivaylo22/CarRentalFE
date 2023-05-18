@@ -119,38 +119,36 @@ export default function Register({isLogged, setIsLogged}) {
     }
 
     return (
-        <div className="register-visual-height">
-            <div className="register-wrapper">
-                <div className="register-inputs">
-                    <DemoItem label="First Name: *" className="input-wrapper">
-                        <TextField className='input' id="first-name-input" variant="outlined" />
-                    </DemoItem>
-                    <DemoItem label="Last Name: *">
-                        <TextField className='input' id="last-name-input" variant="outlined"/>
-                    </DemoItem>
-                    <DemoItem label="Email: *">
-                        <TextField className='input' id="email-input" variant="outlined" type="email" onChange={handleEmailChange} value={email}/>
-                        {errorEmail && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorEmail}</span>}
-                    </DemoItem>
-                    <DemoItem label="Phone Number: *">
-                        <TextField className='input' id="phone-input" variant="outlined" value={phoneNumber} onChange={handlePhoneChange} type="tel"/>
-                        {errorPhone && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPhone}</span>}
-                    </DemoItem>
-                    <DemoItem label="Password: *">
-                        <TextField className='input' id="password-input" variant="outlined" type="password" value={password} onChange={handlePasswordChange}/>
-                        {errorPassword && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPassword}</span>}
-                    </DemoItem>
-                    <DemoItem label="Repeat Password: *">
-                        <TextField className='input' id="repeat-password-input" variant="outlined" type="password" />
-        
-                    </DemoItem>
-                </div>
-                <div className="buttons">
-                    <NavLink to="/">
-                        <Button className='button-register' variant="contained" onClick={register}>Register</Button>
-                    </NavLink>
-                </div>
-        </div>
+        <div className="register-wrapper">
+            <div className="register-inputs">
+                <DemoItem label="First Name: *" className="input-wrapper">
+                    <TextField className='input' id="first-name-input" variant="outlined" />
+                </DemoItem>
+                <DemoItem label="Last Name: *">
+                    <TextField className='input' id="last-name-input" variant="outlined"/>
+                </DemoItem>
+                <DemoItem label="Email: *">
+                    <TextField className='input' id="email-input" variant="outlined" type="email" onChange={handleEmailChange} value={email}/>
+                    {errorEmail && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorEmail}</span>}
+                </DemoItem>
+                <DemoItem label="Phone Number: *">
+                    <TextField className='input' id="phone-input" variant="outlined" value={phoneNumber} onChange={handlePhoneChange} type="tel"/>
+                    {errorPhone && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPhone}</span>}
+                </DemoItem>
+                <DemoItem label="Password: *">
+                    <TextField className='input' id="password-input" variant="outlined" type="password" value={password} onChange={handlePasswordChange}/>
+                    {errorPassword && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPassword}</span>}
+                </DemoItem>
+                <DemoItem label="Repeat Password: *">
+                    <TextField className='input' id="repeat-password-input" variant="outlined" type="password" />
+    
+                </DemoItem>
+            </div>
+            <div className="buttons">
+                <NavLink to="/">
+                    <Button className='button-register' variant="contained" onClick={register}>Register</Button>
+                </NavLink>
+            </div>
         <Dialog open={openDialog} onClose={handleCloseDialog} className="dialog-box">
             <DialogTitle>Successfull registration</DialogTitle>
             <DialogContent>

@@ -67,11 +67,8 @@
 .register {
     margin: 0 auto;
     padding-top: 2vh;
-    color: blue;
-}
-
-.login-visual-height {
-    height: 70vh;
+    color: var(--component-font);
+    font-style: italic;
 }
 
 .socials {

@@ -52,10 +52,6 @@
     background-color: var(--secondary-background);
 }
 
-.register-visual-height {
-    height: 75vh;
-}
-
 .error-message {
     font-size: 0.8vw;
     padding-left: 2%;

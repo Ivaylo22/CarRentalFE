@@ -55,10 +55,6 @@
     background-color: var(--secondary-background);
 }
 
-.confirmation-visual-height {
-    height: 75vh;
-}
-
 .confirmation-question {
     width: 95%;
     padding-top: 3vh;

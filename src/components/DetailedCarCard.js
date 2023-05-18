@@ -286,15 +286,15 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                 <div className="features">
                     <label>
                         <input type="checkbox" id="price1" value="15.99" onClick={calculateExtraTaxes}/>
-                        ADD-ON 1 (<span className="price-italic">+15,99 BGN </span>)
+                        GPS (<span className="price-italic">+15,99 BGN </span>)
                     </label>
                     <label>
                         <input type="checkbox" id="price2" value="17.99" onClick={calculateExtraTaxes}/>
-                        ADD-ON 1 (<span className="price-italic">+17.99 BGN </span>)
+                        Детско столче (<span className="price-italic">+17.99 BGN </span>)
                     </label>
                     <label>
                         <input type="checkbox" id="price3" value="20.99" onClick={calculateExtraTaxes}/>
-                        ADD-ON 1 (<span className="price-italic">+20.99 BGN </span>)
+                        Втори шофьор (<span className="price-italic">+20.99 BGN </span>)
                     </label>
                 </div>
                 <h3 className="wrapper-title">SELECT INSURANCE PLAN</h3>

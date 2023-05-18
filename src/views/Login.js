@@ -16,27 +16,29 @@ export default function Login({isLogged, setIsLogged}){
         
     }
 
+    function googleLogin (event) {
+        setIsLogged(true);
+    }
+
     return (
-        <div className="login-visual-height">
-            <div className="login-wrapper">
-                <div className="credentials">
-                    <DemoItem label="Name:">
-                        <TextField className='input' id="name-input" variant="outlined" />
-                    </DemoItem>
-                    <DemoItem label="Password:">
-                        <TextField className='input' id="password-input" variant="outlined" type="password" />
-                    </DemoItem>
-                </div>
-                <div className="buttons">
-                    <NavLink to="/">
-                        <Button className='button-login' variant="contained" onClick={login}>LOG IN</Button>
-                    </NavLink>
-                    <a href="https://accounts.google.com">
-                        <Button className='button-google' variant="contained">G+ Log In with Google</Button>
-                    </a>
-                </div>
-                <NavLink to="/register" className="register">Or Register</NavLink>
+        <div className="login-wrapper">
+            <div className="credentials">
+                <DemoItem label="Name:">
+                    <TextField className='input' id="name-input" variant="outlined" />
+                </DemoItem>
+                <DemoItem label="Password:">
+                    <TextField className='input' id="password-input" variant="outlined" type="password" />
+                </DemoItem>
             </div>
+            <div className="buttons">
+                <NavLink to="/">
+                    <Button className='button-login' variant="contained" onClick={login}>LOG IN</Button>
+                </NavLink>
+                <NavLink to="/">
+                    <Button className='button-google' variant="contained" onClick={googleLogin}>G+ Log In with Google</Button>
+                </NavLink>
+            </div>
+            <NavLink to="/register" className="register">Or Register</NavLink>
         </div>
     )
 }
