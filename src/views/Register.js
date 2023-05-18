@@ -121,38 +121,38 @@ export default function Register({isLogged, setIsLogged}) {
     return (
         <div className="register-wrapper">
             <div className="register-inputs">
-                <DemoItem label="First Name: *" className="input-wrapper">
+                <DemoItem label="Първо име: *" className="input-wrapper">
                     <TextField className='input' id="first-name-input" variant="outlined" />
                 </DemoItem>
-                <DemoItem label="Last Name: *">
+                <DemoItem label="Фамилия: *">
                     <TextField className='input' id="last-name-input" variant="outlined"/>
                 </DemoItem>
-                <DemoItem label="Email: *">
+                <DemoItem label="Имейл: *">
                     <TextField className='input' id="email-input" variant="outlined" type="email" onChange={handleEmailChange} value={email}/>
                     {errorEmail && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorEmail}</span>}
                 </DemoItem>
-                <DemoItem label="Phone Number: *">
+                <DemoItem label="Телефон: *">
                     <TextField className='input' id="phone-input" variant="outlined" value={phoneNumber} onChange={handlePhoneChange} type="tel"/>
                     {errorPhone && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPhone}</span>}
                 </DemoItem>
-                <DemoItem label="Password: *">
+                <DemoItem label="Парола: *">
                     <TextField className='input' id="password-input" variant="outlined" type="password" value={password} onChange={handlePasswordChange}/>
                     {errorPassword && <span className="error-message italic"><WarningIcon className="warning-icon"/>{errorPassword}</span>}
                 </DemoItem>
-                <DemoItem label="Repeat Password: *">
+                <DemoItem label="Повтори парола: *">
                     <TextField className='input' id="repeat-password-input" variant="outlined" type="password" />
     
                 </DemoItem>
             </div>
             <div className="buttons">
                 <NavLink to="/">
-                    <Button className='button-register' variant="contained" onClick={register}>Register</Button>
+                    <Button className='button-register' variant="contained" onClick={register}>Регистрирай се</Button>
                 </NavLink>
             </div>
         <Dialog open={openDialog} onClose={handleCloseDialog} className="dialog-box">
-            <DialogTitle>Successfull registration</DialogTitle>
+            <DialogTitle>Успешна регистрация</DialogTitle>
             <DialogContent>
-                <p>Your registration was Successfull!</p>
+                <p>Вашата регистрация беше успешна, благодарим Ви, че избрахте нас</p>
                 <div className="dialog-buttons">
                     <Button className='button-login' variant="contained"><NavLink to={"/"} className="button-text">OK</NavLink></Button>
                 </div>

@@ -18,13 +18,13 @@ export default function Navbar({isLogged, setIsLogged}){
             <nav className="navigation-wrapper">
                 <NavLink to="/"><img src={logo} alt="Logo"/></NavLink>
                 <div className="buttons-wrapper">
-                    <NavLink to="/" className={location.pathname === "/" ? "active" : "non-active"}><Button variant="text">Home</Button></NavLink>
-                    <NavLink to="catalogue" className={location.pathname === "/catalogue" ? "active" : "non-active"}><Button variant="text">Catalogue</Button></NavLink>
-                    <NavLink to="/#about-us"  className={location.pathname === "/" ? "non-active" : ""}><Button variant="text">About Us</Button></NavLink>
-                    <NavLink to="/#contact-us"  className={location.pathname === "/" ? "non-active" : ""}><Button variant="text">Contact Us</Button></NavLink>
+                    <NavLink to="/" className={location.pathname === "/" ? "active" : "non-active"}><Button variant="text">Начало</Button></NavLink>
+                    <NavLink to="catalogue" className={location.pathname === "/catalogue" ? "active" : "non-active"}><Button variant="text">Каталог</Button></NavLink>
+                    <NavLink to="/#about-us"  className={location.pathname === "/" ? "non-active" : ""}><Button variant="text">За нас</Button></NavLink>
+                    <NavLink to="/#contact-us"  className={location.pathname === "/" ? "non-active" : ""}><Button variant="text">Контакти</Button></NavLink>
                     {!isLogged 
-                        ? <NavLink to="/login" className={location.pathname === "/" ? "non-active" : ""}><Button>Log in <p>&nbsp;&nbsp;</p> <LoginIcon fontSize='small' className='log-icon'/></Button></NavLink> 
-                        : <NavLink to="/" className={location.pathname === "/" ? "non-active" : ""}><Button onClick={logout}>Log out <p>&nbsp;&nbsp;</p> <LogoutIcon fontSize='small' className='log-icon'/></Button></NavLink> }
+                        ? <NavLink to="/login" className={location.pathname === "/" ? "non-active" : ""}><Button>Впиши се <p>&nbsp;&nbsp;</p> <LoginIcon fontSize='small' className='log-icon'/></Button></NavLink> 
+                        : <NavLink to="/" className={location.pathname === "/" ? "non-active" : ""}><Button onClick={logout}>Излез <p>&nbsp;&nbsp;</p> <LogoutIcon fontSize='small' className='log-icon'/></Button></NavLink> }
                     
                 </div>
             </nav>

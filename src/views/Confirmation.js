@@ -79,7 +79,7 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
     return (
         <div className="confirmation-wrapper">
             <div className="confirmation-inputs">
-                <DemoItem label="First Name: *" className="input-wrapper">
+                <DemoItem label="Първо име: *" className="input-wrapper">
                     <TextField
                     className="input"
                     id="first-name-input"
@@ -87,7 +87,7 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
                     defaultValue={isLogged ?"Georgi" : ""}
                     />
                 </DemoItem>
-                <DemoItem label="Middle Name:">
+                <DemoItem label="Презиме:">
                     <TextField
                     className="input"
                     id="middle-name-input"
@@ -95,7 +95,7 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
                     defaultValue={isLogged ?"Georgiev" : ""}
                     />
                 </DemoItem>
-                <DemoItem label="Last Name: *">
+                <DemoItem label="Фамилия: *">
                     <TextField
                     className="input"
                     id="last-name-input"
@@ -103,7 +103,7 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
                     defaultValue={isLogged ? 'Georgiev' : ''}
                     />
                 </DemoItem>
-                <DemoItem label="Email: *">
+                <DemoItem label="Имейл: *">
                     <TextField
                     className="input"
                     id="email-input"
@@ -112,7 +112,7 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
                     defaultValue={isLogged ? 'geshaskesha@abv.bg' : ''}
                     />
                 </DemoItem>
-                <DemoItem label="Phone Number: *">
+                <DemoItem label="Телефон: *">
                     <TextField
                     className="input"
                     id="phone-input"
@@ -120,7 +120,7 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
                     defaultValue={isLogged ? '0884904162' : ''}
                     />
                 </DemoItem>
-                <DemoItem label="Nationality:">
+                <DemoItem label="Националност:">
                     <TextField
                     className="input"
                     id="nationality-input"
@@ -129,7 +129,7 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
                     />
                 </DemoItem>
                 <div className="confirmation-question">
-                    <DemoItem label="Additional Information">
+                    <DemoItem label="Допълнителна информация">
                         <textarea className="fixed-textarea" rows={3} />
                     </DemoItem>
                 </div>
@@ -137,29 +137,29 @@ export default function Confirmation({isLogged, carId, totalPrice, startDate, dr
     
             <div className="buttons">
             <NavLink to="/">
-                <Button className="button-confirmation" variant="contained" onClick={rent}>RENT</Button>
+                <Button className="button-confirmation" variant="contained" onClick={rent}>НАЕМИ</Button>
             </NavLink>
             </div>
             <Dialog open={openDialog} onClose={handleCloseDialog} className="dialog-box">
-                <DialogTitle>Rent Summary</DialogTitle>
+                <DialogTitle>Обобщение</DialogTitle>
                 <DialogContent>
-                    <p className="dialog-text">Total Price: {totalPrice} BGN</p>
-                    <p className="dialog-text">Your Email: {customerEmail}</p>
-                    <p className="dialog-text">Start Date: {dayjs(startDate).format("YYYY-MM-DD")}</p>
-                    <p className="dialog-text">Drop Date: {dayjs(dropDate).format("YYYY-MM-DD")}</p>
+                    <p className="dialog-text">Крайна цена: {totalPrice}лв</p>
+                    <p className="dialog-text">Имейл: {customerEmail}</p>
+                    <p className="dialog-text">Дата на наем: {dayjs(startDate).format("YYYY-MM-DD")}</p>
+                    <p className="dialog-text">Дата на връщане: {dayjs(dropDate).format("YYYY-MM-DD")}</p>
                     <div className="dialog-buttons">
-                        <Button className='button-login' variant="contained" onClick={handleCloseDialog} >Cancel</Button>
-                        <Button className='button-login' variant="contained" onClick={sendData}>RENT</Button>
+                        <Button className='button-login' variant="contained" onClick={handleCloseDialog} >Затвори</Button>
+                        <Button className='button-login' variant="contained" onClick={sendData}>Наеми</Button>
                     </div>                 
                 </DialogContent>
             </Dialog>
 
             <Dialog open={thankYouDialogOpen} onClose={handleCloseThankYouDialog} className="dialog-box">
-                <DialogTitle>Thank You for choosing RIDE HIVE</DialogTitle>
+                <DialogTitle>Благодарим Ви, че избрахте RIDE HIVE</DialogTitle>
                 <DialogContent>
-                    <p className="dialog-text">We appreciate your business!</p> 
+                    <p className="dialog-text">Оценяваме вашия избор</p> 
                     <div className="dialog-buttons">
-                        <Button className='button-login' variant="contained" onClick={sendData}><NavLink to={"/"} className="button-text">HOME</NavLink></Button>
+                        <Button className='button-login' variant="contained" onClick={sendData}><NavLink to={"/"} className="button-text">НАЧАЛО</NavLink></Button>
                     </div> 
                 </DialogContent>
             </Dialog>

@@ -30,7 +30,7 @@ export default function Catalogue({startDate, dropDate, setStartDate, setDropDat
                         
                 )
             )
-            : <p className="no-cars-found">No cars found.</p>   }
+            : <p className="no-cars-found">Няма намерени коли.</p>   }
             </div>
             <Filter 
                 detailedCars={detailedCars}

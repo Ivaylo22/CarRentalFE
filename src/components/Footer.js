@@ -11,7 +11,6 @@ export default function Footer() {
         <div className="footer-wrapper">
             <NavLink to="/"><img src={logo} alt="Logo"/></NavLink>
             <div className='socials-wrapper'>
-                <p>Find us on social media</p>
                 <div className='socials'>
                     <a href='https://www.facebook.com'><FacebookIcon className='social' fontSize='large'/></a>
                     <a href='https://www.instagram.com'><InstagramIcon  className='social' fontSize='large'/></a>
@@ -19,8 +18,7 @@ export default function Footer() {
                     <a href='https://www.twitter.com'><TwitterIcon  className='social' fontSize='large'/></a>
                 </div>
             </div>
-            <p className='rights-reserved'>All rights reserved © 2023</p>
-
+            <p className='rights-reserved'>Всички права запазени © 2023</p>
         </div>
     )
 }

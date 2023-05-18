@@ -22,34 +22,34 @@ export default function ContactUs(){
 
     return(
         <div className="contact-us" id="contact-us">
-            <h1>Contact us</h1>
+            <h1>Контакти</h1>
             <div className="contact-us-wrapper">
                 <div className="map-wrapper">
                     <iframe title="MyMap" className="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1495562.5859995647!2d25.819532364768975!3d42.93569098442153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbg!2sbg!4v1683132153005!5m2!1sbg!2sbg"></iframe>
                 </div>
                 <div className="form-wrapper">
                     <p className="type-contact">
-                        Write to us:
+                        Пишете ни:
                     </p>
                     <div className="names">
-                        <DemoItem label="Name:">
+                        <DemoItem label="Име:">
                             <TextField className='input' id="outlined-basic" variant="outlined" inputProps={{ ref: nameInputRef }}/>
                         </DemoItem>
-                        <DemoItem label="Email:">
+                        <DemoItem label="Имейл:">
                             <TextField className='input' id="outlined-basic" variant="outlined" inputProps={{ ref: emailInputRef }}/>
                         </DemoItem>
                     </div>
                     <div className="question">
-                        <DemoItem label="Your question">
+                        <DemoItem label="Вашият въпрос:">
                             <textarea className="fixed-textarea" rows={3} ref={questionInputRef}/>
                         </DemoItem>
                     </div>
                     <div className='button-wrapper'>
-                        <Button className='button-send' variant="contained" onClick={handleClearInputs}>SEND IT</Button>
+                        <Button className='button-send' variant="contained" onClick={handleClearInputs}>ИЗПРАТИ</Button>
                     </div>
                     <div className='numbers'>
                         <p className="type-contact">
-                            Or give us a call:
+                            Или ни се обадете:
                         </p>
                         <LocalPhoneIcon fontSize='small' className='phone-icon'/><p className='number'>+359 884904162</p>
                     </div>

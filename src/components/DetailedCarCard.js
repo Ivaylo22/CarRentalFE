@@ -145,7 +145,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                                     <SettingsApplicationsIcon/>
                                 </div>
                                 <div className='icon-text'>
-                                    <p>{exactCar.engine.horsepower} HP</p>
+                                    <p>{exactCar.engine.horsepower} КОНСКИ СИЛИ</p>
                                 </div>    
                             </div>
 
@@ -163,7 +163,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                                     <SensorDoorIcon/>
                                 </div>
                                 <div className='icon-text'>
-                                    <p>{exactCar.numOfDoors} DOORS</p>
+                                    <p>{exactCar.numOfDoors} ВРАТИ</p>
                                 </div>
                             </div>
 
@@ -172,7 +172,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                                     <GasMeterIcon/>
                                 </div>
                                 <div className='icon-text'>
-                                    <p>{convertMpgToLitersPer100km(exactCar.mpg.city)} LITERS/100KM</p>
+                                    <p>{convertMpgToLitersPer100km(exactCar.mpg.city)} РАЗХОД</p>
                                 </div>
                             </div>
 
@@ -181,13 +181,13 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                                     <AnimationIcon/>
                                 </div>
                                 <div className='icon-text'>
-                                    <p>{exactCar.engine.cylinder} CYLINDERS</p>
+                                    <p>{exactCar.engine.cylinder} ЦИЛИНДРИ</p>
                                 </div>
                             </div>  
 
                             <div className='icon-wrapper price'>
                                 <div className='icon-text'>
-                                    <p>DAILY RATE: {exactCar.dailyRate} BGN</p>
+                                    <p>ЦЕНА ЗА ДЕН: {exactCar.dailyRate} лв</p>
                                 </div>
                             </div>
 
@@ -201,7 +201,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
 
                 </div>
                 <div className="additions">
-                    <h1>EXTRAS OF THE CAR</h1>
+                    <h1>ЕКСТРИ</h1>
                     <div>
                         <ul className="extras-ul">
                             {listItems}
@@ -210,31 +210,31 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                 </div>
 
                 <div className="conditions">
-                    <h1>RENTAL CONDITIONS</h1>
+                    <h1>УСЛОВИЯ ЗА НАЕМАНЕ</h1>
                     <ul>
                         <li>
-                            YOU HAVE TO FUEL UP THE CAR
+                            ВИЕ ЗАРЕЖДАТЕ КОЛАТА
                         </li>
                         <li>
-                            YOU HAVE TO PICK-UP THE CAR FROM THE CHOSEN LOCATION AT THE GIVEN TIME
+                            ТРЯБВА ДА ВЗЕМЕТЕ АВТОМОБИЛА ОТ ИЗБРАНОТО МЯСТО И ЧАС
                         </li>
                         <li>
-                            YOU HAVE TO DROP-OFF THE CAR AT THE CHOSEN LOCATION AND TIME
+                            ТРЯБВА ДА ВЪРНЕТЕ АВТОМОБИЛА НА ИЗБРАНОТО МЯСТО И ЧАС
                         </li>
                         <li>
-                            YOU HAVE TO PAY FOR THE ACCIDENTS YOU HAVE CAUSED IF THEY ARE NOT INCLUDED IN THE INSURANCE PLAN YOU HAD CHOSEN
+                            ТРЯБВА ДА ПЛАТИТЕ ЗА ЩЕТИТЕ, КОИТО СТЕ НАПРАВИЛИ, АКО ТЕ НЕ СА ВКЛЮЧЕНИ В ЗАСТРАХОВАТЕЛНИЯ ПЛАН, КОЙТО СТЕ ИЗБРАЛИ
                         </li>
                         <li>
-                            YOU HAVE TO FUEL UP THE CAR
+                            ВИЕ ЗАРЕЖДАТЕ КОЛАТА
                         </li>
                         <li>
-                            YOU HAVE TO PICK-UP THE CAR FROM THE CHOSEN LOCATION AT THE GIVEN TIME
+                            ТРЯБВА ДА ВЗЕМЕТЕ АВТОМОБИЛА ОТ ИЗБРАНОТО МЯСТО И ЧАС
                         </li>
                         <li>
-                            YOU HAVE TO DROP-OFF THE CAR AT THE CHOSEN LOCATION AND TIME
+                            ТРЯБВА ДА ВЪРНЕТЕ АВТОМОБИЛА НА ИЗБРАНОТО МЯСТО И ЧАС
                         </li>
                         <li>
-                            YOU HAVE TO PAY FOR THE ACCIDENTS YOU HAVE CAUSED IF THEY ARE NOT INCLUDED IN THE INSURANCE PLAN YOU HAD CHOSEN
+                            ТРЯБВА ДА ПЛАТИТЕ ЗА ЩЕТИТЕ, КОИТО СТЕ НАПРАВИЛИ, АКО ТЕ НЕ СА ВКЛЮЧЕНИ В ЗАСТРАХОВАТЕЛНИЯ ПЛАН, КОЙТО СТЕ ИЗБРАЛИ
                         </li>
                     </ul>
                 </div>
@@ -245,13 +245,13 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                     <MyCalendar markedDates={exactCar.rentDates} />
                     <div className="legend">
                         <div className="circle"></div>
-                        <p>TAKEN DATES</p>
+                        <p>ЗАЕТИ ДАТИ</p>
                     </div>
                 </div>
-                <h3 className="wrapper-title">YOUR RENTAL DETAIL</h3>
+                <h3 className="wrapper-title">ДАННИ ЗА НАЕМАНЕ</h3>
                 <div className="detail-dates">
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DemoItem label="PICK-UP DATE">
+                        <DemoItem label="ДАТА НА НАЕМАНЕ">
                             <DatePicker 
                                 className="filter-date-picker"
                                 defaultValue={null}
@@ -259,7 +259,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                                 onChange={(date) => setStartDate(date)}
                             />
                         </DemoItem>
-                        <DemoItem label="DROP-OFF DATE">
+                        <DemoItem label="ДАТА НА ВРЪЩАНЕ">
                             <DatePicker 
                                 className="filter-date-picker"
                                 defaultValue={null}
@@ -269,7 +269,7 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                             />
                         </DemoItem>
                     </LocalizationProvider>
-                    <DemoItem label="LOCATION">
+                    <DemoItem label="ЛОКАЦИЯ">
                         <Autocomplete
                             className="filter-autocomplete"
                             disablePortal
@@ -282,65 +282,65 @@ export default function DetailedCarCard({detailedCars, startDate, dropDate, setS
                         />  
                     </DemoItem>
                 </div>
-                <h3 className="wrapper-title">ADDITIONAL FEATURES</h3>
+                <h3 className="wrapper-title">ДОПЪЛНИТЕЛНИ ЕКСТРИ</h3>
                 <div className="features">
                     <label>
                         <input type="checkbox" id="price1" value="15.99" onClick={calculateExtraTaxes}/>
-                        GPS (<span className="price-italic">+15,99 BGN </span>)
+                        GPS (<span className="price-italic">+15,99 лв </span>)
                     </label>
                     <label>
                         <input type="checkbox" id="price2" value="17.99" onClick={calculateExtraTaxes}/>
-                        Детско столче (<span className="price-italic">+17.99 BGN </span>)
+                        Детско столче (<span className="price-italic">+17.99 лв</span>)
                     </label>
                     <label>
                         <input type="checkbox" id="price3" value="20.99" onClick={calculateExtraTaxes}/>
-                        Втори шофьор (<span className="price-italic">+20.99 BGN </span>)
+                        Втори шофьор (<span className="price-italic">+20.99 лв</span>)
                     </label>
                 </div>
-                <h3 className="wrapper-title">SELECT INSURANCE PLAN</h3>
+                <h3 className="wrapper-title">ЗАСТРАХОВАТЕЛЕН ПЛАН</h3>
                 <div className="insurance">
                     <label>
                         <input type="radio" name="myRadio" value="0" onClick={calculateExtraTaxes} defaultChecked  />
                         <div>
-                            <p className="plan-name">PLAN 1 (<span className="price-italic">DEFAULT </span>)</p>
-                            <p className="plan-description"> plan description: includes this and this</p>
+                            <p className="plan-name">ПЛАН 1 (<span className="price-italic">ПО ПОДРАЗБИРАНЕ </span>)</p>
+                            <p className="plan-description"> описание: включва това и това</p>
                         </div>
                     </label>
                     <label>
                         <input type="radio" name="myRadio" value="17.99" onClick={calculateExtraTaxes}/>
                         <div>
-                            <p className="plan-name">PLAN 2 (<span className="price-italic">+17.99 BGN </span>)</p>
-                            <p className="plan-description"> plan description: includes this and this</p>
+                            <p className="plan-name">ПЛАН 2 (<span className="price-italic">+17.99 лв </span>)</p>
+                            <p className="plan-description"> описание: включва това и това</p>
                         </div>
                     </label>
                     <label>
                         <input type="radio" name="myRadio" value="49.99" onClick={calculateExtraTaxes}/>
                         <div>
-                            <p className="plan-name">PLAN 3 (<span className="price-italic">+49.99 BGN </span>)</p>
-                            <p className="plan-description"> plan description: includes this and this</p>
+                            <p className="plan-name">ПЛАН 3 (<span className="price-italic">+49.99 лв</span>)</p>
+                            <p className="plan-description"> описание: включва това и това</p>
                         </div>
                     </label>
                 </div>
                 <div className="final-prices">
-                    <h2>TOTAL PRICE:</h2>
-                    <h2><span className="price-italic">{(parseFloat(exactCar.dailyRate) + parseFloat(addPrice)).toFixed(2)} BGN </span></h2>
+                    <h2>КРАЙНА ЦЕНА:</h2>
+                    <h2><span className="price-italic">{(parseFloat(exactCar.dailyRate) + parseFloat(addPrice)).toFixed(2)} лв </span></h2>
                 </div>
                 
                 <div className="button-wrapper">
-                    <NavLink to={'../confirmation'}> <Button className='button-filter' variant="contained" onClick={handleRentClick}>RENT NOW</Button></NavLink>
+                    <NavLink to={'../confirmation'}> <Button className='button-filter' variant="contained" onClick={handleRentClick}>НАЕМИ</Button></NavLink>
                 </div>
                 
             </div>
             <Dialog open={openDialog} onClose={handleCloseDialog}>
-                <DialogTitle>Incorect input</DialogTitle>
+                <DialogTitle>Невалидни данни</DialogTitle>
                 {errorType === "invalidDate" && (
                 <DialogContent>
-                    <p>Please chose valid dates.</p>
+                    <p>Моля, изберете валидни дати.</p>
                 </DialogContent>
                 )}
                 {errorType === "noLocation" && (
                 <DialogContent>
-                    <p>Please write your location.</p>
+                    <p>Моля, изберете вашата локация.</p>
                 </DialogContent>
                 )}
                 

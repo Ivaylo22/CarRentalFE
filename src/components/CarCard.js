@@ -48,15 +48,15 @@ export default function CarCard(props) {
                             <SettingsApplicationsIcon/>
                         </div>
                         <div className='icon-text'>
-                            <p>{engine} HP</p>
+                            <p>{engine} конски сили</p>
                         </div>    
                     </div>
 
                 </div>  
                 <div className='button-wrapper'>
-                    <p className='price'>{price} BGN / day</p>
-                    <p className='italic discount'>-10% IF LOGGED IN</p>
-                    <Button variant="outlined"><NavLink to={`${vin}`}>Show More</NavLink></Button>
+                    <p className='price'>{price} лв/ден</p>
+                    <p className='italic discount'>-10% АКО СТЕ СЕ ВПИСАЛИ</p>
+                    <Button variant="outlined"><NavLink to={`${vin}`}>Детайли</NavLink></Button>
                 </div>
 
             </div>      

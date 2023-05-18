@@ -25,19 +25,19 @@ export default function HomeDatePicker({startDate,dropDate, setStartDate, setDro
     return (
         <div className="dates-form">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DemoItem label="PICK-UP DATE">
+                <DemoItem label="ДАТА НА ЗАЕМАНЕ">
                     <DatePicker 
                         onChange={(date) => setStartDate(date)}
                     />
                 </DemoItem>
-                <DemoItem label="DROP-OFF DATE">
+                <DemoItem label="ДАТА НА ВРЪЩАНЕ">
                     <DatePicker 
                         onChange={(date) => setDropDate(date)}
                         minDate={startDate}
                     />
                 </DemoItem>
             </LocalizationProvider>
-            <DemoItem label="Max price">
+            <DemoItem label="МАКСИМАЛНА ЦЕНА">
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"
@@ -48,12 +48,12 @@ export default function HomeDatePicker({startDate,dropDate, setStartDate, setDro
                 }}   
             />  
             </DemoItem>
-            <NavLink to="catalogue" onClick={handleClick}><Button className='button-find' variant="contained">Find it now</Button></NavLink>
+            <NavLink to="catalogue" onClick={handleClick}><Button className='button-find' variant="contained">Намери</Button></NavLink>
 
             <Dialog open={openDialog} onClose={handleCloseDialog}>
-                <DialogTitle>Invalid Date Selection</DialogTitle>
+                <DialogTitle>Невалидни дати</DialogTitle>
                 <DialogContent>
-                    <p>The drop date must be after the start date.</p>
+                    <p>Датата на връщане трябва да е след датата на наемане.</p>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseDialog}>OK</Button>

@@ -1,9 +1,9 @@
 export const prices = ["100", "150", "200", "250", "300"]
 
 export const locations = 
-["Varna", "Sofia", "Burgas", "Plovdiv", "Veliko Turnovo", 
-"Shumen", "Montana", "Yablanica", "Yambol", "Ruse", "Smolyan",
-"Gabrovo", "Vraca", "Vidin", "Trigrad", "Melnik", "Dimitrovgrad", "Ivaylovgrad"]
+["Варна", "София", "Бургас", "Пловдив", "Велико Търново", 
+"Шумен", "Монтана", "Ябланица", "Ямбол", "Русе", "Смолян",
+"Габрово", "Враца", "Видин", "Триград", "Мелник", "Димитровград", "Ивайловград"]
 
 export function isAvailableInRange(startDate, endDate, takenDates) {
     const start = new Date(startDate).getTime();

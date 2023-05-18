@@ -23,22 +23,22 @@ export default function Login({isLogged, setIsLogged}){
     return (
         <div className="login-wrapper">
             <div className="credentials">
-                <DemoItem label="Name:">
+                <DemoItem label="Име:">
                     <TextField className='input' id="name-input" variant="outlined" />
                 </DemoItem>
-                <DemoItem label="Password:">
+                <DemoItem label="Парола:">
                     <TextField className='input' id="password-input" variant="outlined" type="password" />
                 </DemoItem>
             </div>
             <div className="buttons">
                 <NavLink to="/">
-                    <Button className='button-login' variant="contained" onClick={login}>LOG IN</Button>
+                    <Button className='button-login' variant="contained" onClick={login}>ВЛЕЗ</Button>
                 </NavLink>
                 <NavLink to="/">
-                    <Button className='button-google' variant="contained" onClick={googleLogin}>G+ Log In with Google</Button>
+                    <Button className='button-google' variant="contained" onClick={googleLogin}>G+ Влез с Google</Button>
                 </NavLink>
             </div>
-            <NavLink to="/register" className="register">Or Register</NavLink>
+            <NavLink to="/register" className="register">Или се регистрирай</NavLink>
         </div>
     )
 }

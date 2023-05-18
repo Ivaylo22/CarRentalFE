@@ -42,7 +42,7 @@ export default function Filter({startDate, dropDate, setStartDate, setDropDate, 
         <div className="filter-wrapper">
             <div className="filter-params-wrapper">
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DemoItem label="PICK-UP DATE">
+                    <DemoItem label="ДАТА НА НАЕМАНЕ">
                         <DatePicker 
                             className="filter-date-picker"
                             defaultValue={null}
@@ -50,7 +50,7 @@ export default function Filter({startDate, dropDate, setStartDate, setDropDate, 
                             onChange={(date) => setStartDate(date)}
                         />
                     </DemoItem>
-                    <DemoItem label="DROP-OFF DATE">
+                    <DemoItem label="ДАТА НА ВРЪЩАНЕ">
                         <DatePicker 
                             className="filter-date-picker"
                             defaultValue={null}
@@ -60,7 +60,7 @@ export default function Filter({startDate, dropDate, setStartDate, setDropDate, 
                         />
                     </DemoItem>
                 </LocalizationProvider>
-                <DemoItem label="FUEL TYPE">
+                <DemoItem label="ВИД ГОРИВО">
                     <Autocomplete
                         className="filter-autocomplete"
                         disablePortal
@@ -69,14 +69,14 @@ export default function Filter({startDate, dropDate, setStartDate, setDropDate, 
                         onChange={(event, newFuel) => {
                             setFuelType(newFuel);
                         }}  
-                        renderInput={(params) => <TextField {...params} label="Select fuel" />}              
+                        renderInput={(params) => <TextField {...params} label="Избери гориво" />}              
                     />  
                 </DemoItem>
-                <DemoItem label="MAX PRICE">
+                <DemoItem label="МАКСИМАЛНА ЦЕНА">
                     <TextField 
                         className="filter-price" 
                         id="outlined-basic" 
-                        label="Maximum daily price" 
+                        label="Избери максимална цена" 
                         variant="outlined" 
                         defaultValue={maxPrice}
                         onChange={(event) => {
@@ -87,12 +87,12 @@ export default function Filter({startDate, dropDate, setStartDate, setDropDate, 
                 
             </div>
             <div className="button-wrapper">
-                <Button  className='button-filter' variant="contained" onClick={handleFilterClick}>Filter</Button>
+                <Button  className='button-filter' variant="contained" onClick={handleFilterClick}>Филтрирай</Button>
             </div>
             <Dialog open={openDialog} onClose={handleCloseDialog}>
-                <DialogTitle>Invalid Date Selection</DialogTitle>
+                <DialogTitle>Невалидни дати</DialogTitle>
                 <DialogContent>
-                    <p>The drop date must be after the start date.</p>
+                    <p>Датата на връщане трябва да е след датата на наемане.</p>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseDialog}>OK</Button>

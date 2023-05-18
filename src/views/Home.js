@@ -32,9 +32,9 @@ export default function Home({startDate, dropDate, setStartDate, setDropDate, se
         <div>
             <main className="home-wrapper">
                 <div className="main-advertise">  
-                    <h1 className="title">Book Your Car Rental</h1>
-                    <p className="hook">Luxury and Comfortable Cars at low-cost, <span className="ad-price">starts 70 BGN / day</span></p>
-                    <p className="slogan">Unlock Your Adventure</p>
+                    <h1 className="title">Резервирайте автомобил</h1>
+                    <p className="hook">Луксозни и комфортни автомобили на ниска цена, <span className="ad-price">70лв / ден</span></p>
+                    <p className="slogan">Отключете своето приключение</p>
                 </div>
                 <div className="date-picker">
                     <HomeDatePicker startDate={startDate} dropDate={dropDate}setStartDate={setStartDate} setDropDate={setDropDate} setMaxPrice={setMaxPrice}/>
